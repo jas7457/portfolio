@@ -1,0 +1,35 @@
+import React, { useContext } from 'react';
+
+import Tech, { TechObject } from './Tech';
+import TechContext from '../../context/TechContext';
+
+export default function TechList(props: TechListProps) {
+	const { techList } = props;
+
+	const techContext = useContext(TechContext);
+	const oneSelected = Object.values(techContext).some((selected) => selected);
+
+	return (
+		<ul className="flex flex-wrap space-x-2">
+			{techList.map((tech) => {
+				const isSelected = techContext[tech.name];
+				const { color, textColor } = (() => {
+					if (!oneSelected || isSelected) {
+						return { color: tech.color, textColor: undefined };
+					}
+					return { color: undefined, textColor: 'text-gray-500' };
+				})();
+
+				return (
+					<li key={tech.name} className={textColor}>
+						<Tech {...tech} color={color} iconClassName={textColor} isSelected={isSelected} />
+					</li>
+				);
+			})}
+		</ul>
+	);
+}
+
+interface TechListProps {
+	techList: TechObject[];
+}
