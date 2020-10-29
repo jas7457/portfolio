@@ -1,0 +1,5 @@
+{
+	"env": {
+		"PUPPETEER_PRODUCT": "firefox"
+	}
+}
