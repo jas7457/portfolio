@@ -4,9 +4,8 @@ const puppeteerPromise = new Promise(async (resolve) => {
 	const browser = await puppeteer.launch();
 	const page = await browser.newPage();
 	await page.setViewport({ width: 500, height: 100, isMobile: true, isLandscape: true });
-	//await page.setViewport({ width: 1680, height: 1050 });
 
-	await page.goto('http://localhost:3000?pdf=true', {
+	await page.goto('https://portfolio-liard-five.vercel.app/resume?pdf=true', {
 		waitUntil: 'networkidle2',
 	});
 
