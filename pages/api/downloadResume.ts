@@ -1,11 +1,13 @@
 import puppeteer from 'puppeteer';
 
 const puppeteerPromise = new Promise(async (resolve) => {
-	const browser = await puppeteer.launch();
+	const browser = await puppeteer.launch({ headless: true });
 	const page = await browser.newPage();
 	await page.setViewport({ width: 500, height: 100, isMobile: true, isLandscape: true });
 
-	await page.goto('https://portfolio.jaddleman.vercel.app/resume?pdf=true', {
+	const { VERCEL_URL: URL = 'http://localhost:3000' } = process.env;
+
+	await page.goto(`${URL}/resume?pdf=true`, {
 		waitUntil: 'networkidle2',
 	});
 
