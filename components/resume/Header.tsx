@@ -1,13 +1,14 @@
 import React from 'react';
-import type { IconType } from 'react-icons';
-
+import Image from 'next/image';
 import { GoMail } from 'react-icons/go';
 import { FaCity, FaPhone } from 'react-icons/fa';
+
+import type { IconType } from 'react-icons';
 
 export default function Header() {
 	return (
 		<header className="flex items-center py-4 mb-4 border-b-2 flex-col text-center space-y-4 md:space-y-0 md:space-x-4 md:flex-row md:text-left">
-			<img src="/profile.jpg" alt="Jason Addleman" className="h-24 w-24 rounded-full" />
+			<Image src="/profile.jpg" alt="Jason Addleman" className="rounded-full" width={96} height={96} priority />
 
 			<div className="flex-grow">
 				<h1 className="text-4xl text-blue-600 leading-none mb-1">Jason Addleman</h1>

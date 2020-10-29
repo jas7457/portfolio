@@ -16,7 +16,7 @@ const CONFIGS = {
 			strokeLinejoin: 'round',
 		},
 		child: [
-			{ tag: 'use', attr: { 'xlink:href': '#express-icon', x: '.5', y: '.5' }, child: [] },
+			{ tag: 'use', attr: { xlinkHref: '#express-icon', x: '.5', y: '.5' }, child: [] },
 			{
 				tag: 'symbol',
 				attr: { id: 'express-icon', overflow: 'visible' },
