@@ -1,11 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { GoMail } from 'react-icons/go';
 import { FaCity, FaPhone } from 'react-icons/fa';
 
 import type { IconType } from 'react-icons';
 
-export default function Header() {
+export default function Header({ isPDF }: { isPDF: boolean }) {
 	return (
 		<header className="flex items-center py-4 mb-4 border-b-2 flex-col text-center space-y-4 md:space-y-0 md:space-x-4 md:flex-row md:text-left">
 			<Image src="/profile.jpg" alt="Jason Addleman" className="rounded-full" width={96} height={96} priority />
@@ -13,6 +14,12 @@ export default function Header() {
 			<div className="flex-grow">
 				<h1 className="text-4xl text-blue-600 leading-none mb-1">Jason Addleman</h1>
 				<h2 className="text-xl leading-none">Full-Stack Developer focused on React and SPAs</h2>
+
+				{!isPDF && (
+					<Link href="/api/downloadResume">
+						<a className="mt-2 px-2 py-1 inline-block rounded-lg bg-blue-600 text-white">Download as PDF</a>
+					</Link>
+				)}
 			</div>
 
 			<div className="flex-shrink-0 space-y-1">

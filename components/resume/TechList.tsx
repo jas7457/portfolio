@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import clsx from 'clsx';
 
 import Tech, { TechObject } from './Tech';
 import TechContext from '../../context/TechContext';
@@ -10,7 +11,7 @@ export default function TechList(props: TechListProps) {
 	const oneSelected = Object.values(techContext).some((selected) => selected);
 
 	return (
-		<ul className="flex flex-wrap space-x-2">
+		<ul className="flex flex-wrap">
 			{techList.map((tech) => {
 				const isSelected = techContext[tech.name];
 				const { color, textColor } = (() => {
@@ -21,7 +22,7 @@ export default function TechList(props: TechListProps) {
 				})();
 
 				return (
-					<li key={tech.name} className={textColor}>
+					<li key={tech.name} className={clsx('m-1', textColor)}>
 						<Tech {...tech} color={color} iconClassName={textColor} isSelected={isSelected} />
 					</li>
 				);

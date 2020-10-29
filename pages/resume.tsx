@@ -10,7 +10,7 @@ export default function ResumePage() {
 				<title>Jason Addleman's Resume</title>
 				<meta name="description" content="Jason Addleman's resume: A Full-Stack Developer focused on React and SPAs" />
 			</Head>
-			<Resume />♂
+			<Resume />
 		</>
 	);
 }

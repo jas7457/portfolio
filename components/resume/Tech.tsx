@@ -18,6 +18,10 @@ import {
 	SiJira,
 	SiConfluence,
 	SiSass,
+	SiJquery,
+	SiEmberDotJs,
+	SiJest,
+	SiMocha,
 } from 'react-icons/si';
 import { DiBackbone } from 'react-icons/di';
 
@@ -61,17 +65,17 @@ type TechType<T extends Record<string, TechObject>> = EvaluateType<{ [key in key
 const createTech = <T extends Record<string, TechObject>>(tech: T) => tech;
 
 const techLookup = createTech({
-	JavaScript: {
-		name: 'JavaScript',
-		type: 'language',
-		Icon: SiJavascript,
-		color: '#efd81d',
-	},
 	TypeScript: {
 		name: 'TypeScript',
 		type: 'language',
 		Icon: SiTypescript,
 		color: '#2d79c7',
+	},
+	JavaScript: {
+		name: 'JavaScript',
+		type: 'language',
+		Icon: SiJavascript,
+		color: '#efd81d',
 	},
 	HTML: {
 		name: 'HTML',
@@ -115,6 +119,24 @@ const techLookup = createTech({
 		Icon: SiTailwindcss,
 		color: '#14b4c6',
 	},
+	Jest: {
+		name: 'Jest',
+		type: 'framework',
+		Icon: SiJest,
+		color: '#944058',
+	},
+	Mocha: {
+		name: 'mocha',
+		type: 'framework',
+		Icon: SiMocha,
+		color: '#866041',
+	},
+	JQuery: {
+		name: 'jQuery',
+		type: 'framework',
+		Icon: SiJquery,
+		color: '#0466aa',
+	},
 	Backbone: {
 		name: 'Backbone.js',
 		type: 'framework',
@@ -126,6 +148,13 @@ const techLookup = createTech({
 		type: 'framework',
 		Icon: Marionette,
 		color: '#ce2227',
+	},
+
+	Ember: {
+		name: 'Ember.js',
+		type: 'framework',
+		Icon: SiEmberDotJs,
+		color: '#0466aa',
 	},
 
 	Koa: {
@@ -144,7 +173,7 @@ const techLookup = createTech({
 		name: 'Hapi',
 		type: 'database',
 		Icon: Hapi,
-		color: '#000',
+		color: '#ee9021',
 	},
 	Mongo: {
 		name: 'Mongo DB',
