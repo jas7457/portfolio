@@ -6,10 +6,10 @@ import Header from './Header';
 import ExperienceSection, { ExperienceSectionProps } from './ExperienceSection';
 import SectionTitle from './SectionTitle';
 import TechWord from './TechWord';
-import TechContext from '../../context/TechContext';
+import TechContext from '../../../context/TechContext';
 import { TechMap, TechObject } from './Tech';
 
-import useLocalStorage from '../../hooks/useLocalStorage';
+import useLocalStorage from '../../../hooks/useLocalStorage';
 import TechnicalSkill from './TechnicalSkill';
 
 export default function Resume() {

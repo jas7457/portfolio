@@ -25,7 +25,7 @@ import {
 } from 'react-icons/si';
 import { DiBackbone } from 'react-icons/di';
 
-import { Marionette, Express, Koa, Hapi } from '../CustomIcons';
+import { Marionette, Express, Koa, Hapi } from '../../CustomIcons';
 
 import type { IconType } from 'react-icons/lib';
 
