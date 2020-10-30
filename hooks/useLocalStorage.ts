@@ -11,7 +11,7 @@ export default function useLocalStorage<T>(key: string, init: T | (() => T)): [T
 				setState(JSON.parse(val));
 			}
 		} catch (e) {}
-	}, []);
+	}, [key]);
 
 	return [
 		state,

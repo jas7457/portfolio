@@ -1,4 +1,5 @@
 import puppeteer from 'puppeteer';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 const puppeteerPromise = new Promise(async (resolve) => {
 	const browser = await puppeteer.launch({ headless: true });
@@ -18,7 +19,7 @@ const puppeteerPromise = new Promise(async (resolve) => {
 	resolve(buffer);
 });
 
-export default async (_req: any, res: any) => {
+export default async (_req: NextApiRequest, res: NextApiResponse) => {
 	res.statusCode = 200;
 	res.setHeader('Content-Type', 'application/pdf');
 	res.end(await puppeteerPromise);

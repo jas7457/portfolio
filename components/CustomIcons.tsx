@@ -1,9 +1,9 @@
 import { GenIcon, IconBaseProps, IconTree } from 'react-icons';
 
-export const Marionette = (props: IconBaseProps) => GenIcon((CONFIGS.Marionette as any) as IconTree)(props);
-export const Express = (props: IconBaseProps) => GenIcon((CONFIGS.Express as any) as IconTree)(props);
-export const Koa = (props: IconBaseProps) => GenIcon((CONFIGS.Koa as any) as IconTree)(props);
-export const Hapi = (props: IconBaseProps) => GenIcon((CONFIGS.Hapi as any) as IconTree)(props);
+export const Marionette = (props: IconBaseProps) => GenIcon((CONFIGS.Marionette as unknown) as IconTree)(props);
+export const Express = (props: IconBaseProps) => GenIcon((CONFIGS.Express as unknown) as IconTree)(props);
+export const Koa = (props: IconBaseProps) => GenIcon((CONFIGS.Koa as unknown) as IconTree)(props);
+export const Hapi = (props: IconBaseProps) => GenIcon((CONFIGS.Hapi as unknown) as IconTree)(props);
 
 const CONFIGS = {
 	Express: {

@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 
 export default function Snake() {
 	const [state, setState] = useState(initialState);
-	const { rows, columns, snake, direction, food } = state;
+	const { rows, columns, snake, food } = state;
 
 	const boardRef = useRef<HTMLDivElement>(null);
 
@@ -30,7 +30,7 @@ export default function Snake() {
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setState((state) => {
-				const { snake, direction } = state;
+				const { snake, direction, columns, rows } = state;
 
 				const snakeCopy = [...snake];
 				const head = [...snakeCopy[0]];
