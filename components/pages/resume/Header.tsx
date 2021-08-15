@@ -15,7 +15,7 @@ export default function Header({ isPDF }: { isPDF: boolean }) {
 				<h1 className="text-4xl text-blue-600 leading-none mb-1">Jason Addleman</h1>
 				<h2 className="text-xl leading-none">Full-Stack Developer focused on React and SPAs</h2>
 
-				{!isPDF && (
+				{process.env.NEXT_PUBLIC_ENVIRONMENT === 'local' && !isPDF && (
 					<Link href="/api/downloadResume">
 						<a className="mt-2 px-2 py-1 inline-block rounded-lg bg-blue-600 text-white">Download as PDF</a>
 					</Link>
