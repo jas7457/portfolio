@@ -35,10 +35,5 @@
 		"eslint-plugin-react-hooks": "^4.2.0",
 		"husky": "^7.0.1"
 	},
-	"license": "MIT",
-	"husky": {
-		"hooks": {
-			"pre-commit": "yarn type-check && yarn lint"
-		}
-	}
+	"license": "MIT"
 }
