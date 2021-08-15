@@ -1,8 +1,8 @@
 import React from 'react';
-import type { AppPropsType } from 'next/dist/next-server/lib/utils';
+import type { AppProps } from 'next/app';
 
 import '../styles/index.css';
 
-export default function App({ Component, pageProps }: AppPropsType) {
+export default function App({ Component, pageProps }: AppProps) {
 	return <Component {...pageProps} />;
 }

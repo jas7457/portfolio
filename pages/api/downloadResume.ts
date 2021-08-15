@@ -12,7 +12,7 @@ const puppeteerPromise = new Promise(async (resolve) => {
 		waitUntil: 'networkidle2',
 	});
 
-	const buffer = await page.pdf({ format: 'A3' });
+	const buffer = await page.pdf({ format: 'a3' });
 
 	await browser.close();
 
