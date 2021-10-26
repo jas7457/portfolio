@@ -52,11 +52,13 @@ export default function Resume() {
 						<section>
 							<SectionTitle>Introduction</SectionTitle>
 							<p>
-								I am an engineering manager with extensive experience as a full-stack developer. I have a focus on
+								I am an engineering manager with extensive experience as a front end engineer. I am focused on
 								developing feature-rich, responsive, and accessible web apps. I specialize in building{' '}
 								<TechWord tech={TechMap.React}>React</TechWord> with{' '}
-								<TechWord tech={TechMap.TypeScript}>TypeScript</TechWord> for the front end, and using{' '}
-								<TechWord tech={TechMap.Node}>Node</TechWord> for the back end.
+								<TechWord tech={TechMap.TypeScript}>TypeScript</TechWord>,{' '}
+								<TechWord tech={TechMap.GraphQL}>GraphQL</TechWord>, and{' '}
+								<TechWord tech={TechMap.Tailwind}>Tailwind CSS</TechWord> for the front end, and using{' '}
+								<TechWord tech={TechMap.Node}>Node</TechWord> on the back end.
 							</p>
 						</section>
 
@@ -122,21 +124,23 @@ const experienceArray: ExperienceSectionProps[] = [
 		id: 'exp1',
 		positionTitle: 'Engineering Manager',
 		location: 'Pittsburgh, PA',
-		company: 'Proofpoint',
+		company: 'Proofpoint / Thoma Bravo',
 		startDate: new Date('4/1/2020'),
 		techStack: [
 			TechMap.React,
-			TechMap.JavaScript,
 			TechMap.TypeScript,
+			TechMap.JavaScript,
 			TechMap.HTML,
 			TechMap.Tailwind,
 			TechMap.SASS,
 			TechMap.CSS,
+			TechMap.GraphQL,
 			TechMap.Node,
 			TechMap.Mongo,
 			TechMap.Koa,
 			TechMap.Hapi,
 			TechMap.Jest,
+			TechMap.Ember,
 		],
 		children: (
 			<div className="space-y-2">
@@ -150,10 +154,10 @@ const experienceArray: ExperienceSectionProps[] = [
 						I oversee and develop a greenfield project that consists of rewriting our legacy web app from the ground up
 						in <TechWord tech={TechMap.React}>React</TechWord>.
 					</li>
-					<li>Pair with my developers when they are stuck and provide general mentoring</li>
+					<li>Pair with other developers when they are stuck and provide general mentoring.</li>
 					<li>
-						Work with the project managers to define requirements and use my knowledge of our framework and the
-						technology we use to guide the process.
+						Work with the project managers to define requirements and use my knowledge of our framework, technology, and
+						best practices to guide the process.
 					</li>
 					<li>
 						Coordinate with our UX team to find repeating patterns or repetition and consolidate reusable components for
@@ -192,12 +196,11 @@ const experienceArray: ExperienceSectionProps[] = [
 		children: (
 			<div className="space-y-2">
 				<p>
-					I took the initiative to start converting our legacy web app from{' '}
-					<TechWord tech={TechMap.Backbone}>Backbone</TechWord> and{' '}
-					<TechWord tech={TechMap.Marionette}>Marionette</TechWord> to <TechWord tech={TechMap.React}>React</TechWord>{' '}
-					for a new, large initiative our company was taking. A proof-of-concept of how to integrate{' '}
-					<TechWord tech={TechMap.React}>React</TechWord> into our stack has become one of our biggest differentiators
-					in the market.
+					I took the lead on converting our legacy web app from <TechWord tech={TechMap.Backbone}>Backbone</TechWord>{' '}
+					and <TechWord tech={TechMap.Marionette}>Marionette</TechWord> to{' '}
+					<TechWord tech={TechMap.React}>React</TechWord> for a new, large strategic initiative our company was taking.
+					A proof-of-concept of how to integrate <TechWord tech={TechMap.React}>React</TechWord> into our stack has
+					become one of our biggest differentiators in the market.
 				</p>
 
 				<ul className="list-disc pl-8 space-y-1">
@@ -212,8 +215,8 @@ const experienceArray: ExperienceSectionProps[] = [
 					</li>
 					<li>
 						Created duplicate components in <TechWord tech={TechMap.React}>React</TechWord> for every component in our
-						codebase. These components shared styles and some functionality, but added the ability for end-user edits of
-						the content.
+						codebase. These components shared styles and some functionality, but added the ability for end-user WYSIWYG
+						edits of the content.
 					</li>
 					<li>
 						Led the effort for keeping our code secure by integrating <TechWord tech={TechMap.GitHub}>GitHub</TechWord>{' '}

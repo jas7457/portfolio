@@ -18,7 +18,7 @@ export default function Header({ isPDF }: { isPDF: boolean }) {
 
 			<div className="flex-grow">
 				<h1 className="text-4xl text-blue-600 leading-none mb-1">Jason Addleman</h1>
-				<h2 className="text-xl leading-none">Senior Front End Developer focused on React and TypeScript</h2>
+				<h2 className="text-xl leading-none">Front End Engineering Manager focused on React and TypeScript</h2>
 
 				{process.env.NEXT_PUBLIC_ENVIRONMENT === 'local' && !isPDF && (
 					<Link href="/api/downloadResume">
