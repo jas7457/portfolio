@@ -8,9 +8,9 @@ import SectionTitle from './SectionTitle';
 import TechWord from './TechWord';
 import TechnicalSkill from './TechnicalSkill';
 import { TechMap, TechObject } from './Tech';
-import TechContext from '../../../context/TechContext';
+import TechContext from '@app/context/TechContext';
 
-import useLocalStorage from '../../../hooks/useLocalStorage';
+import useLocalStorage from '@app/hooks/useLocalStorage';
 
 export default function Resume() {
 	const router = useRouter();
@@ -34,9 +34,10 @@ export default function Resume() {
 			.every((selectedTech) => experience.techStack.some((tech) => selectedTech.name === tech.name))
 	);
 
-	const onlyOneSelected = useMemo(() => techWithSelection.filter((tech) => tech.isSelected).length === 1, [
-		techWithSelection,
-	]);
+	const onlyOneSelected = useMemo(
+		() => techWithSelection.filter((tech) => tech.isSelected).length === 1,
+		[techWithSelection]
+	);
 
 	return (
 		<div

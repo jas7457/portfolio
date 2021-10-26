@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 
-import Resume from '../components/pages/resume/Resume';
+import Resume from '@app/components/pages/resume/Resume';
 
 export default function ResumePage() {
 	return (

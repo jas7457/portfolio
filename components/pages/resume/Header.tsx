@@ -6,7 +6,7 @@ import { FaCity, FaPhone } from 'react-icons/fa';
 import { CgDarkMode } from 'react-icons/cg';
 
 import type { IconType } from 'react-icons';
-import useDarkMode from '../../../hooks/useDarkMode';
+import useDarkMode from '@app/hooks/useDarkMode';
 import clsx from 'clsx';
 
 export default function Header({ isPDF }: { isPDF: boolean }) {

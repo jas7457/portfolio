@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import clsx from 'clsx';
 
 import type { TechObject } from './Tech';
-import TechContext from '../../../context/TechContext';
+import TechContext from '@app/context/TechContext';
 import { getTechClasses } from './Tech';
 
 export default function TechnicalSkill(props: TechnicalSkillProps) {

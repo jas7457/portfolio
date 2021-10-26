@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import clsx from 'clsx';
 
-import TechContext from '../../../context/TechContext';
+import TechContext from '@app/context/TechContext';
 import { TechObject } from './Tech';
 
 export default function TechWord(props: TechWordProps) {

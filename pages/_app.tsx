@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import type { AppProps } from 'next/app';
 
 import '../styles/index.css';
-import DarkModeContext from '../context/DarkModeContext';
-import useLocalStorage from '../hooks/useLocalStorage';
+import DarkModeContext from '@app/context/DarkModeContext';
+import useLocalStorage from '@app/hooks/useLocalStorage';
 
 export default function App({ Component, pageProps }: AppProps) {
 	const [isDarkMode, setIsDarkMode, wasLoaded] = useLocalStorage<boolean>('darkMode', undefined!);
