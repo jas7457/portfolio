@@ -41,7 +41,7 @@ export default function Resume() {
 
 	return (
 		<div
-			className={clsx('mx-auto px-4 text-gray-900 dark:text-gray-200 transition-colors duration-500', {
+			className={clsx('mx-auto px-4', {
 				container: !isPDF,
 			})}
 		>

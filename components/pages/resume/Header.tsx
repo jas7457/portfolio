@@ -17,12 +17,12 @@ export default function Header({ isPDF }: { isPDF: boolean }) {
 			<Image src="/profile.jpg" alt="Jason Addleman" className="rounded-full" width={96} height={96} priority />
 
 			<div className="flex-grow">
-				<h1 className="text-4xl text-blue-600 leading-none mb-1">Jason Addleman</h1>
+				<h1 className="text-4xl text-primary leading-none mb-1">Jason Addleman</h1>
 				<h2 className="text-xl leading-none">Front End Engineering Manager focused on React and TypeScript</h2>
 
 				{process.env.NEXT_PUBLIC_ENVIRONMENT === 'local' && !isPDF && (
 					<Link href="/api/downloadResume">
-						<a className="mt-2 px-2 py-1 inline-block rounded-lg bg-blue-600 text-white">Download as PDF</a>
+						<a className="mt-2 px-2 py-1 inline-block rounded-lg bg-primary text-white">Download as PDF</a>
 					</Link>
 				)}
 			</div>

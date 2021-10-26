@@ -28,7 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<DarkModeContext.Provider value={[isDarkMode, setIsDarkMode]}>
 			<div className={isDarkMode ? 'dark' : undefined}>
-				<div className="dark:bg-dark transition-colors duration-500">
+				<div className="text-text dark:text-dark-text dark:bg-dark transition-colors duration-500">
 					<Component {...pageProps} />
 				</div>
 			</div>
