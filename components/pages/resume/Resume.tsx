@@ -6,11 +6,11 @@ import Header from './Header';
 import ExperienceSection, { ExperienceSectionProps } from './ExperienceSection';
 import SectionTitle from './SectionTitle';
 import TechWord from './TechWord';
-import TechContext from '../../../context/TechContext';
+import TechnicalSkill from './TechnicalSkill';
 import { TechMap, TechObject } from './Tech';
+import TechContext from '../../../context/TechContext';
 
 import useLocalStorage from '../../../hooks/useLocalStorage';
-import TechnicalSkill from './TechnicalSkill';
 
 export default function Resume() {
 	const router = useRouter();
@@ -39,17 +39,22 @@ export default function Resume() {
 	]);
 
 	return (
-		<div className={clsx('mx-auto px-4 text-gray-900', { container: !isPDF })}>
+		<div
+			className={clsx('mx-auto px-4 text-gray-900 dark:text-gray-200 transition-colors duration-500', {
+				container: !isPDF,
+			})}
+		>
 			<Header isPDF={isPDF} />
 			<TechContext.Provider value={selectedTech}>
-				<main className="space-y-6 md:flex md:space-y-0 md:space-x-10">
+				<main className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-10">
 					<div className="md:w-2/3 space-y-6">
 						<section>
 							<SectionTitle>Introduction</SectionTitle>
 							<p>
 								I am an engineering manager with extensive experience as a full-stack developer. I have a focus on
 								developing feature-rich, responsive, and accessible web apps. I specialize in building{' '}
-								<TechWord tech={TechMap.React}>React</TechWord> apps for the front end, and using{' '}
+								<TechWord tech={TechMap.React}>React</TechWord> with{' '}
+								<TechWord tech={TechMap.TypeScript}>TypeScript</TechWord> for the front end, and using{' '}
 								<TechWord tech={TechMap.Node}>Node</TechWord> for the back end.
 							</p>
 						</section>

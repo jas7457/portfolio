@@ -27,6 +27,7 @@
 	},
 	"rules": {
 		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"@typescript-eslint/no-non-null-assertion": "off",
 		"react/react-in-jsx-scope": "off",
 		"no-empty": ["error", { "allowEmptyCatch": true }],
 		"react/no-unescaped-entities": "off",

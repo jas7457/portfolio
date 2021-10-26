@@ -33,6 +33,10 @@ function formatDate(date: Date | undefined) {
 }
 
 export interface ExperienceSectionProps {
+	/** Some comment about the id
+	 * there might be more
+	 * can be multi line
+	 */
 	id: string;
 	children: React.ReactNode;
 	positionTitle: string;

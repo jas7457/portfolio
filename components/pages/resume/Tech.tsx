@@ -22,6 +22,7 @@ import {
 	SiEmberDotJs,
 	SiJest,
 	SiMocha,
+	SiVisualstudiocode,
 } from 'react-icons/si';
 import { DiBackbone } from 'react-icons/di';
 
@@ -41,7 +42,8 @@ export default function Tech(props: TechProps) {
 
 export function getTechClasses(isSelected: boolean) {
 	return clsx('inline-flex items-center py-1 rounded-full border-2 border-transparent', {
-		'bg-gray-700 text-white': isSelected,
+		'dark:bg-gray-800': !isSelected,
+		'bg-gray-700 dark:bg-gray-200 text-white dark:text-gray-800': isSelected,
 	});
 }
 
@@ -131,6 +133,12 @@ const techLookup = createTech({
 		Icon: SiMocha,
 		color: '#866041',
 	},
+	Ember: {
+		name: 'Ember.js',
+		type: 'framework',
+		Icon: SiEmberDotJs,
+		color: '#0466aa',
+	},
 	JQuery: {
 		name: 'jQuery',
 		type: 'framework',
@@ -149,14 +157,12 @@ const techLookup = createTech({
 		Icon: Marionette,
 		color: '#ce2227',
 	},
-
-	Ember: {
-		name: 'Ember.js',
-		type: 'framework',
-		Icon: SiEmberDotJs,
-		color: '#0466aa',
+	GraphQL: {
+		name: 'GraphQL',
+		type: 'database',
+		Icon: SiGraphql,
+		color: '#E535AB',
 	},
-
 	Koa: {
 		name: 'Koa',
 		type: 'database',
@@ -181,12 +187,6 @@ const techLookup = createTech({
 		Icon: SiMongodb,
 		color: '#50a64a',
 	},
-	GraphQL: {
-		name: 'GraphQL',
-		type: 'database',
-		Icon: SiGraphql,
-		color: '#E535AB',
-	},
 
 	Git: {
 		name: 'Git',
@@ -205,6 +205,12 @@ const techLookup = createTech({
 		type: 'software',
 		Icon: SiWebstorm,
 		color: '#1a1e22',
+	},
+	VisualStudioCode: {
+		name: 'VS Code',
+		type: 'software',
+		Icon: SiVisualstudiocode,
+		color: '#497BB8',
 	},
 	Jenkins: {
 		name: 'Jenkins',

@@ -1,11 +1,14 @@
 // eslint-disable-next-line no-undef
 module.exports = {
-	future: {
-		removeDeprecatedGapUtilities: true,
-		purgeLayersByDefault: true,
-	},
 	purge: ['./**/*.tsx'],
+	darkMode: 'class',
+	mode: 'jit',
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				dark: '#1E1E1E',
+			},
+		},
 	},
+	plugins: [require('tailwindcss-interaction-variants')],
 };

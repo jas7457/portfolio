@@ -13,13 +13,9 @@ export default function useLocalStorage<T>(key: string, init: T | (() => T)): [T
 		} catch (e) {}
 	}, [key]);
 
-	return [
-		state,
-		(val) => {
-			setState(val);
-			try {
-				localStorage.setItem(key, JSON.stringify(val));
-			} catch (e) {}
-		},
-	];
+	useEffect(() => {
+		localStorage.setItem(key, JSON.stringify(state));
+	}, [key, state]);
+
+	return [state, setState];
 }

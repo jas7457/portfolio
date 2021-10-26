@@ -2073,7 +2073,7 @@ lodash.truncate@^4.4.2:
   resolved "https://registry.yarnpkg.com/lodash.truncate/-/lodash.truncate-4.4.2.tgz#5a350da0b1113b837ecfffd5812cbe58d6eae193"
   integrity sha1-WjUNoLERO4N+z//VgSy+WNbq4ZM=
 
-lodash@^4.17.21:
+lodash@^4.17.19, lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -3538,6 +3538,14 @@ table@^6.0.9:
     slice-ansi "^4.0.0"
     string-width "^4.2.0"
     strip-ansi "^6.0.0"
+
+tailwindcss-interaction-variants@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/tailwindcss-interaction-variants/-/tailwindcss-interaction-variants-5.0.0.tgz#8e0825dfa4b2a81804cbae536915e48a85e96580"
+  integrity sha512-Tmx9HjwuNA3G7cLUcebGkNchKkNVIZXBroxa0LBoq/KUb/xEKEM8qugUG7QczSNPhaZzpXmo3IzPkRhf4tDaOQ==
+  dependencies:
+    lodash "^4.17.19"
+    postcss-selector-parser "^6.0.2"
 
 tailwindcss@^2.2.7:
   version "2.2.7"
