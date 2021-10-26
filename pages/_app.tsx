@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import type { AppProps } from 'next/app';
 
 import '../styles/index.css';
@@ -7,10 +7,16 @@ import useLocalStorage from '../hooks/useLocalStorage';
 
 export default function App({ Component, pageProps }: AppProps) {
 	const [isDarkMode, setIsDarkMode] = useLocalStorage('darkMode', false);
+	const [shouldShow, setShouldShow] = useState(false);
 
-	useLayoutEffect(() => {
+	useEffect(() => {
 		setIsDarkMode(window.matchMedia?.('(prefers-color-scheme: dark)').matches ?? false);
+		setShouldShow(true);
 	}, [setIsDarkMode]);
+
+	if (!shouldShow) {
+		return null;
+	}
 
 	return (
 		<DarkModeContext.Provider value={[isDarkMode, setIsDarkMode]}>

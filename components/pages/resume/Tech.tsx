@@ -5,10 +5,10 @@ import {
 	SiTypescript,
 	SiReact,
 	SiHtml5,
-	SiNodeDotJs,
+	SiNodedotjs,
 	SiCss3,
 	SiMongodb,
-	SiNextDotJs,
+	SiNextdotjs,
 	SiGraphql,
 	SiTailwindcss,
 	SiGit,
@@ -19,7 +19,7 @@ import {
 	SiConfluence,
 	SiSass,
 	SiJquery,
-	SiEmberDotJs,
+	SiEmberdotjs,
 	SiJest,
 	SiMocha,
 	SiVisualstudiocode,
@@ -100,7 +100,7 @@ const techLookup = createTech({
 	Node: {
 		name: 'Node',
 		type: 'language',
-		Icon: SiNodeDotJs,
+		Icon: SiNodedotjs,
 		color: '#6ea55f',
 	},
 	React: {
@@ -112,7 +112,7 @@ const techLookup = createTech({
 	Next: {
 		name: 'Next.js',
 		type: 'framework',
-		Icon: SiNextDotJs,
+		Icon: SiNextdotjs,
 		color: '#000',
 	},
 	Tailwind: {
@@ -136,7 +136,7 @@ const techLookup = createTech({
 	Ember: {
 		name: 'Ember.js',
 		type: 'framework',
-		Icon: SiEmberDotJs,
+		Icon: SiEmberdotjs,
 		color: '#0466aa',
 	},
 	JQuery: {
