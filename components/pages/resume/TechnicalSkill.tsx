@@ -11,7 +11,7 @@ export default function TechnicalSkill(props: TechnicalSkillProps) {
 	const techContext = useContext(TechContext);
 
 	return (
-		<div>
+		<div data-component="technical-skill">
 			<h4 className="font-bold text-lg">{title}</h4>
 			<ul className="flex flex-wrap">
 				{techList.map((tech) => {
@@ -31,7 +31,7 @@ export default function TechnicalSkill(props: TechnicalSkillProps) {
 								)}
 								onClick={() => onTechClick(tech)}
 							>
-								<Icon color={tech.color} className="mr-1" /> {tech.name}
+								<Icon className={clsx('mr-1', tech.color)} /> {tech.name}
 							</button>
 						</li>
 					);

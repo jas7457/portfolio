@@ -30,12 +30,12 @@ import { Marionette, Express, Koa, Hapi } from '@app/components/CustomIcons';
 
 import type { IconType } from 'react-icons/lib';
 
-export default function Tech(props: TechProps) {
+export default function Tech(props: Omit<TechProps, 'color'> & { color?: TechProps['color'] }) {
 	const { name, Icon, color, className, iconClassName, isSelected = false } = props;
 
 	return (
 		<div className={clsx(className, 'px-2', getTechClasses(isSelected))}>
-			<Icon color={color} className={clsx('mr-1', iconClassName)} /> {name}
+			<Icon className={clsx('mr-1', iconClassName, color)} /> {name}
 		</div>
 	);
 }
@@ -56,7 +56,7 @@ interface TechProps extends TechObject {
 export interface TechObject {
 	name: string;
 	Icon: IconType;
-	color: string | undefined;
+	color: string;
 	type: 'language' | 'framework' | 'database' | 'software';
 }
 
@@ -71,164 +71,164 @@ const techLookup = createTech({
 		name: 'TypeScript',
 		type: 'language',
 		Icon: SiTypescript,
-		color: '#2d79c7',
+		color: 'text-tech-typescript',
 	},
 	JavaScript: {
 		name: 'JavaScript',
 		type: 'language',
 		Icon: SiJavascript,
-		color: '#efd81d',
+		color: 'text-tech-javascript',
 	},
 	HTML: {
 		name: 'HTML',
 		type: 'language',
 		Icon: SiHtml5,
-		color: '#dd4b25',
+		color: 'text-tech-html',
 	},
 	CSS: {
 		name: 'CSS',
 		type: 'language',
 		Icon: SiCss3,
-		color: '#1a6fb4',
+		color: 'text-tech-css',
 	},
 	SASS: {
 		name: 'SCSS',
 		type: 'language',
 		Icon: SiSass,
-		color: '#c76494',
+		color: 'text-tech-scss',
 	},
 	Node: {
 		name: 'Node',
 		type: 'language',
 		Icon: SiNodedotjs,
-		color: '#6ea55f',
+		color: 'text-tech-node',
 	},
 	React: {
 		name: 'React',
 		type: 'framework',
 		Icon: SiReact,
-		color: '#5ed3f3',
+		color: 'text-tech-react',
 	},
 	Next: {
 		name: 'Next.js',
 		type: 'framework',
 		Icon: SiNextdotjs,
-		color: '#000',
+		color: 'text-tech-next',
 	},
 	Tailwind: {
 		name: 'Tailwind CSS',
 		type: 'framework',
 		Icon: SiTailwindcss,
-		color: '#14b4c6',
+		color: 'text-tech-tailwind',
 	},
 	Jest: {
 		name: 'Jest',
 		type: 'framework',
 		Icon: SiJest,
-		color: '#944058',
+		color: 'text-tech-jest',
 	},
 	Mocha: {
 		name: 'mocha',
 		type: 'framework',
 		Icon: SiMocha,
-		color: '#866041',
+		color: 'text-tech-mocha',
 	},
 	Ember: {
 		name: 'Ember.js',
 		type: 'framework',
 		Icon: SiEmberdotjs,
-		color: '#0466aa',
+		color: 'text-tech-ember',
 	},
 	JQuery: {
 		name: 'jQuery',
 		type: 'framework',
 		Icon: SiJquery,
-		color: '#0466aa',
+		color: 'text-tech-jquery',
 	},
 	Backbone: {
 		name: 'Backbone.js',
 		type: 'framework',
 		Icon: DiBackbone,
-		color: '#0071b5',
+		color: 'text-tech-backbone',
 	},
 	Marionette: {
 		name: 'Marionette',
 		type: 'framework',
 		Icon: Marionette,
-		color: '#ce2227',
+		color: 'text-tech-marionette',
 	},
 	GraphQL: {
 		name: 'GraphQL',
 		type: 'database',
 		Icon: SiGraphql,
-		color: '#E535AB',
+		color: 'text-tech-graphql',
 	},
 	Koa: {
 		name: 'Koa',
 		type: 'database',
 		Icon: Koa,
-		color: '#000',
+		color: 'text-tech-koa',
 	},
 	Express: {
 		name: 'Express',
 		type: 'database',
 		Icon: Express,
-		color: '#000',
+		color: 'text-tech-express',
 	},
 	Hapi: {
 		name: 'Hapi',
 		type: 'database',
 		Icon: Hapi,
-		color: '#ee9021',
+		color: 'text-tech-hapi',
 	},
 	Mongo: {
 		name: 'Mongo DB',
 		type: 'database',
 		Icon: SiMongodb,
-		color: '#50a64a',
+		color: 'text-tech-mongo',
 	},
 
 	Git: {
 		name: 'Git',
 		type: 'software',
 		Icon: SiGit,
-		color: '#eb4d28',
+		color: 'text-tech-git',
 	},
 	GitHub: {
 		name: 'GitHub',
 		type: 'software',
 		Icon: SiGithub,
-		color: '#1a1e22',
+		color: 'text-tech-github',
 	},
 	WebStorm: {
 		name: 'WebStorm',
 		type: 'software',
 		Icon: SiWebstorm,
-		color: '#1a1e22',
+		color: 'text-tech-webstorm',
 	},
 	VisualStudioCode: {
 		name: 'VS Code',
 		type: 'software',
 		Icon: SiVisualstudiocode,
-		color: '#497BB8',
+		color: 'text-tech-vscode',
 	},
 	Jenkins: {
 		name: 'Jenkins',
 		type: 'software',
 		Icon: SiJenkins,
-		color: '#cc3631',
+		color: 'text-tech-jenkins',
 	},
 	JIRA: {
 		name: 'JIRA',
 		type: 'software',
 		Icon: SiJira,
-		color: '#2580f7',
+		color: 'text-tech-jira',
 	},
 	Confluence: {
 		name: 'Confluence',
 		type: 'software',
 		Icon: SiConfluence,
-		color: '#2680f5',
+		color: 'text-tech-confluence',
 	},
 });
 
