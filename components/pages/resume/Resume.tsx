@@ -154,7 +154,6 @@ const experienceArray: ExperienceSectionProps[] = [
 						I oversee and develop a greenfield project that consists of rewriting our legacy web app from the ground up
 						in <TechWord tech={TechMap.React}>React</TechWord>.
 					</li>
-					<li>Pair with other developers when they are stuck and provide general mentoring.</li>
 					<li>
 						Work with the project managers to define requirements and use my knowledge of our framework, technology, and
 						best practices to guide the process.

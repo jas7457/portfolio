@@ -3,29 +3,40 @@ import React, { useState } from 'react';
 import clsx from 'clsx';
 
 import Circle from '@app/assets/svg/circle.svg';
-import { getHex } from '@app/utils/getHexColors';
+import getHexColor from '@app/utils/getHexColor';
+import Heading, { HeadingLevel } from '@app/components/Heading';
+import { FaMobileAlt } from 'react-icons/fa';
+import { MdHealthAndSafety, MdOutlineAccessibility } from 'react-icons/md';
+import { GiArrowCursor } from 'react-icons/gi';
+import { SiReact } from 'react-icons/si';
 
 export default function Beliefs({ className }: { className?: string }) {
 	const [selectedBeliefIndex, setSelectedBeliefIndex] = useState(0);
 
 	return (
 		<AnimateOnScreen
-			className={clsx(className, 'transition duration-1000')}
+			className={clsx(className, 'transition duration-1000 space-y-8')}
 			idleClassName="opacity-0"
 			offScreenClassName="translate-y-48 opacity-0"
 			onScreenClassName="translate-y-0 opacity-100"
 			intersectionObserverOptions={{ rootMargin: '-75px 0px 0px 0px' }}
 		>
+			<p>
+				Over my career I've worked with many different technologies and many different developers. I try to stay abreast
+				on the ever-changing front end landscape. Throughout the years, I've learned what I consider to be best
+				practices and general guidelines to use when building web applications.
+			</p>
+
 			<ol className="grid grid-cols-2 md:grid-cols-5">
 				{beliefs.map((belief, index) => (
 					<li key={belief.title} className={belief.classes} onMouseOver={() => setSelectedBeliefIndex(index)}>
 						<div className="relative flex justify-center">
 							<Circle
-								width={200}
+								width={150}
 								className="transition-transform"
 								strokeWidth={'1px'}
 								style={{
-									transform: selectedBeliefIndex === index ? 'scale(1)' : 'scale(0.25)',
+									transform: selectedBeliefIndex === index ? 'scale(1)' : 'scale(0.30)',
 								}}
 								stroke={belief.color}
 								{...(selectedBeliefIndex === index
@@ -45,7 +56,7 @@ export default function Beliefs({ className }: { className?: string }) {
 						</div>
 						<div className="text-center">
 							<button
-								className="uppercase font-semibold"
+								className="uppercase font-semibold cursor-auto"
 								onFocus={() => setSelectedBeliefIndex(index)}
 								style={
 									selectedBeliefIndex === index
@@ -63,19 +74,21 @@ export default function Beliefs({ className }: { className?: string }) {
 			</ol>
 
 			<div className="grid">
-				{beliefs.map((belief, index) => (
+				{beliefs.map(({ title, Icon, children, color }, index) => (
 					<div
-						key={belief.title}
+						key={title}
 						className={clsx(
 							'transition-opacity duration-500',
 							selectedBeliefIndex === index ? 'opacity-100' : 'opacity-0'
 						)}
+						aria-hidden={selectedBeliefIndex !== index}
 						style={{ gridColumn: '1 / 1', gridRow: '1 / 1' }}
 					>
-						<h1 className="text-2xl mt-8 mb-4" style={{ color: belief.color }}>
-							{belief.title}
-						</h1>
-						{belief.children}
+						<Heading className="flex items-center space-x-2 text-2xl mt-8 mb-4" style={{ color }}>
+							<span>{title}</span>
+							<Icon />
+						</Heading>
+						<HeadingLevel>{children}</HeadingLevel>
 					</div>
 				))}
 			</div>
@@ -83,10 +96,17 @@ export default function Beliefs({ className }: { className?: string }) {
 	);
 }
 
-const beliefs: Array<{ title: string; color: string; children: React.ReactNode; classes?: string }> = [
+const beliefs: Array<{
+	title: string;
+	color: string;
+	children: React.ReactNode;
+	Icon: React.ComponentType;
+	classes?: string;
+}> = [
 	{
 		title: 'Responsive',
-		color: getHex('red'),
+		color: getHexColor('yellow'),
+		Icon: FaMobileAlt,
 		children: (
 			<div className="space-y-4">
 				<p>
@@ -103,7 +123,8 @@ const beliefs: Array<{ title: string; color: string; children: React.ReactNode; 
 	},
 	{
 		title: 'Declarative',
-		color: getHex('teal'),
+		color: getHexColor('blue'),
+		Icon: SiReact,
 		children: (
 			<div className="space-y-4">
 				<p>
@@ -116,7 +137,8 @@ const beliefs: Array<{ title: string; color: string; children: React.ReactNode; 
 	},
 	{
 		title: 'Type-Safe',
-		color: getHex('yellow'),
+		color: getHexColor('green'),
+		Icon: MdHealthAndSafety,
 		children: (
 			<div className="space-y-4">
 				<p>
@@ -124,25 +146,18 @@ const beliefs: Array<{ title: string; color: string; children: React.ReactNode; 
 					introduced to TypeScript in 2015 and haven't looked back since.
 				</p>
 
-				<p>I'm a big believer that TypeScript and other type-safe languages have numerous benefits.</p>
-
-				<ul className="list-disc list-inside">
-					<li>Move faster during development</li>
-					<li>Provide documentation to other developers</li>
-					<li>Make refactoring a preeze</li>
-					<li>Ship less bugs</li>
-				</ul>
-
 				<p>
-					Besides TypeScript, I love to utilize GraphQL for the server integration. These two technologies have a lot of
-					overlap and play very nicely together.
+					I'm a big believer that TypeScript and other type-safe languages have numerous benefits. Besides TypeScript, I
+					love to utilize GraphQL for API integrations. These two technologies have a lot of overlap and play very
+					nicely together.
 				</p>
 			</div>
 		),
 	},
 	{
 		title: 'Accessible',
-		color: getHex('gray'),
+		color: getHexColor('red'),
+		Icon: MdOutlineAccessibility,
 		children: (
 			<div className="space-y-4">
 				<p>
@@ -154,7 +169,8 @@ const beliefs: Array<{ title: string; color: string; children: React.ReactNode; 
 	},
 	{
 		title: 'Interactive',
-		color: getHex('blue'),
+		color: getHexColor('teal'),
+		Icon: GiArrowCursor,
 		classes: 'col-start-1 col-end-3 md:col-auto',
 		children: (
 			<div className="space-y-4">

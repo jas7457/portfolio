@@ -33,9 +33,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b67b88fa-27cb-4ed3-b8fe-624964548992" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/pages/portfolio/Beliefs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/portfolio/Beliefs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/pages/portfolio/Hero.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/portfolio/Hero.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/pages/portfolio/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/portfolio/Hero.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/pages/portfolio/Portfolio.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/portfolio/Portfolio.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/getHexColors.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +77,7 @@
       <workItem from="1603998445905" duration="136000" />
       <workItem from="1604030539978" duration="5000" />
       <workItem from="1635292113855" duration="220000" />
+      <workItem from="1635375628203" duration="28000" />
     </task>
     <servers />
   </component>
@@ -95,6 +100,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="94" y="94" width="1349" height="637" key="DiffContextDialog" timestamp="1635292231575">

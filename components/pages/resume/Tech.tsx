@@ -23,6 +23,8 @@ import {
 	SiJest,
 	SiMocha,
 	SiVisualstudiocode,
+	SiStyledcomponents,
+	SiShopify,
 } from 'react-icons/si';
 import { DiBackbone } from 'react-icons/di';
 
@@ -157,6 +159,12 @@ const techLookup = createTech({
 		Icon: Marionette,
 		color: 'text-tech-marionette',
 	},
+	StyledComponents: {
+		name: 'styled components',
+		type: 'framework',
+		Icon: SiStyledcomponents,
+		color: 'text-tech-styledcomponents',
+	},
 	GraphQL: {
 		name: 'GraphQL',
 		type: 'database',
@@ -229,6 +237,12 @@ const techLookup = createTech({
 		type: 'software',
 		Icon: SiConfluence,
 		color: 'text-tech-confluence',
+	},
+	Shopify: {
+		name: 'Shopify',
+		type: 'software',
+		Icon: SiShopify,
+		color: 'text-tech-shopify',
 	},
 });
 

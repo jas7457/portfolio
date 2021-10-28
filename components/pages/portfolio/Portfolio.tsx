@@ -1,131 +1,182 @@
 import Image from 'next/image';
-import { TechMap, TechObject } from '../resume/Tech';
-import React, { useState } from 'react';
-import clsx from 'clsx';
+import Link from 'next/link';
+import React from 'react';
 
 import AnimateOnScreen from '@app/components/AnimateOnScreen';
 
 import Hero from './Hero';
 import Beliefs from './Beliefs';
+import Heading, { HeadingLevel } from '@app/components/Heading';
+import TechItems from './TechItems';
+import { SiGithub, SiTwitter, SiLinkedin } from 'react-icons/si';
+import { MdAlternateEmail, MdPhoneIphone } from 'react-icons/md';
+import { BsArrowUpCircleFill } from 'react-icons/bs';
+
+import clsx from 'clsx';
+import Projects from './Projects';
 
 export default function Portfolio() {
 	return (
 		<>
-			<Hero />
+			<header>
+				<Hero />
+			</header>
 
-			<div className="space-y-24">
+			<main className="my-12 space-y-24">
 				<section>
 					<Container>
 						<Title>About Me</Title>
-						<div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-							<AnimateOnScreen
-								className="text-center space-y-4 transition duration-1000"
-								idleClassName="opacity-0"
-								onScreenClassName="translate-x-0 opacity-100"
-								offScreenClassName="-translate-x-32 opacity-0"
-								intersectionObserverOptions={{ rootMargin: '-75px 0px 0px 0px' }}
-							>
-								<Image
-									src="/profile.jpg"
-									alt="Jason Addleman"
-									className="rounded-full"
-									width={200}
-									height={200}
-									priority
-								/>
-								<div className="text-3xl font-medium text-dark">Who am I?</div>
-								<p>
-									I'm a front end developer based in Pittsburgh, Pennsylvania. I have a passion for modern technology,
-									working and learning with others, and bringing UX interactions to life. Let's{' '}
-									<a className="text-primary" href="mailto:jas7457@gmail.com">
-										connect!
-									</a>
-								</p>
-							</AnimateOnScreen>
+						<HeadingLevel>
+							<div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+								<AnimateOnScreen
+									className="text-center space-y-4 transition duration-1000"
+									idleClassName="opacity-0"
+									onScreenClassName="translate-x-0 opacity-100"
+									offScreenClassName="-translate-x-32 opacity-0"
+									intersectionObserverOptions={{ rootMargin: '-75px 0px 0px 0px' }}
+								>
+									<Image
+										src="/profile.jpg"
+										alt="Jason Addleman"
+										className="rounded-full"
+										width={200}
+										height={200}
+										priority
+									/>
+									<Heading className="text-3xl font-medium text-dark">Who am I?</Heading>
+									<p>
+										I'm a front end developer based in Pittsburgh, Pennsylvania. I have a passion for modern technology,
+										working and learning with others, and bringing UX interactions to life.
+									</p>
 
-							<TechItems />
-						</div>
+									<p>
+										Interested in working together? View my{' '}
+										<Link href="/resume">
+											<a className="text-primary">resume</a>
+										</Link>
+										,{' '}
+										<a className="text-primary" href="/JasonAddlemanResume.pdf" download>
+											download
+										</a>{' '}
+										a copy, or connect over{' '}
+										<a className="text-primary" href="mailto:jas7457@gmail.com">
+											email
+										</a>{' '}
+										or{' '}
+										<a className="text-primary" href="tel:+7176584499">
+											phone!
+										</a>
+									</p>
+								</AnimateOnScreen>
+
+								<TechItems />
+							</div>
+						</HeadingLevel>
 					</Container>
 				</section>
 
 				<section>
 					<Container>
 						<Title>What I Believe</Title>
-						<Beliefs className="mb-48" />
+						<HeadingLevel>
+							<Beliefs />
+						</HeadingLevel>
 					</Container>
 				</section>
-			</div>
+
+				<section>
+					<Container>
+						<Title>Projects</Title>
+						<HeadingLevel>
+							<Projects />
+						</HeadingLevel>
+					</Container>
+				</section>
+			</main>
+
+			<footer className="flex flex-col items-center relative space-y-2 py-8 bg-gray-800 text-gray-400">
+				<button
+					className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full transition-transform hocus:scale-110"
+					onClick={() => {
+						window.scrollTo({
+							behavior: 'smooth',
+							top: 0,
+							left: 0,
+						});
+					}}
+				>
+					<div className="absolute bg-white rounded-full w-3/4 h-3/4 inset-1"></div>
+					<BsArrowUpCircleFill className="text-3xl text-primary relative z-10" />
+				</button>
+				<div className="space-x-2 font-thin">
+					<span>Jason Addleman</span>
+					<span className="animate-pulse">/</span>
+					<span>©&nbsp;{new Date().getFullYear()}</span>
+				</div>
+
+				<div className="flex space-x-2">
+					{[
+						{
+							title: 'LinkedIn',
+							href: 'https://www.linkedin.com/in/jason-addleman-91544997/',
+							classes: 'hocus:text-tech-linkedin',
+							Icon: SiLinkedin,
+							blankTarget: true,
+						},
+						{
+							title: 'Github',
+							href: 'https://github.com/jas7457',
+							classes: 'hocus:text-white',
+							Icon: SiGithub,
+							blankTarget: true,
+						},
+						{
+							title: 'Twitter',
+							href: 'https://twitter.com/jas7457',
+							classes: 'hocus:text-tech-twitter',
+							Icon: SiTwitter,
+							blankTarget: true,
+						},
+						{
+							title: 'Email',
+							href: 'mailto:jas7457@gmail.com',
+							classes: 'hocus:text-tech-html',
+							Icon: MdAlternateEmail,
+							blankTarget: false,
+						},
+						{
+							title: 'Phone',
+							href: 'tel:+7176584499',
+							classes: 'hocus:text-tech-node',
+							Icon: MdPhoneIphone,
+							blankTarget: false,
+						},
+					].map(({ href, title, classes, blankTarget, Icon }, index) => {
+						return (
+							<a
+								key={index}
+								href={href}
+								className={clsx('hocus:scale-110 transition-transform focus:outline-none', classes)}
+								title={title}
+								{...(blankTarget && { target: '_blank', rel: 'noopener noreferrer' })}
+							>
+								<Icon />
+							</a>
+						);
+					})}
+				</div>
+			</footer>
 		</>
 	);
 }
 
-function TechItems() {
-	const [onScreen, setOnScreen] = useState(false);
-
-	const showcaseList: Array<{ tech: TechObject; percent: number }> = [
-		{ tech: TechMap.React, percent: 95 },
-		{ tech: TechMap.Next, percent: 75 },
-		{ tech: TechMap.TypeScript, percent: 90 },
-		{ tech: TechMap.JavaScript, percent: 85 },
-		{ tech: TechMap.CSS, percent: 85 },
-		{ tech: TechMap.Tailwind, percent: 80 },
-		{ tech: TechMap.GraphQL, percent: 75 },
-		{ tech: TechMap.Node, percent: 80 },
-		{ tech: TechMap.Koa, percent: 65 },
-	];
-
-	return (
-		<AnimateOnScreen
-			className="transition duration-1000"
-			idleClassName="opacity-0"
-			onScreenClassName="translate-x-0 opacity-100"
-			offScreenClassName="translate-x-32 opacity-0"
-			intersectionObserverOptions={{ rootMargin: '-75px 0px 0px 0px' }}
-			onIntersection={() => setOnScreen(true)}
-		>
-			<ol className="space-y-2">
-				{showcaseList.map(({ tech, percent }) => (
-					<li key={tech.name} className="flex relative">
-						<div className={clsx('relative bg-primary-dark text-white w-36 py-1 px-2')}>
-							<div
-								className={clsx(
-									'flex items-center space-x-2 delay-1000 transition-opacity duration-1000',
-									onScreen ? 'opacity-100' : 'opacity-0'
-								)}
-							>
-								<tech.Icon />
-								<span>{tech.name}</span>
-							</div>
-						</div>
-						<div className="flex-grow bg-gray-300 flex">
-							<div className="flex-grow relative">
-								<div
-									className={clsx('absolute inset-0 bg-primary')}
-									style={{
-										width: `${onScreen ? percent : 0}%`,
-										transitionProperty: 'width',
-										transitionDuration: '1s',
-										transitionDelay: '1s',
-										transitionTimingFunction: 'cubic-bezier(.08,.11,.4,.13)',
-									}}
-								></div>
-							</div>
-							<div className="px-2 flex items-center">{percent}%</div>
-						</div>
-					</li>
-				))}
-			</ol>
-		</AnimateOnScreen>
-	);
-}
-
 function Container({ children }: { children: React.ReactNode }) {
-	return <div className="max-w-6xl mx-auto w-full px-8">{children}</div>;
+	return <div className="max-w-7xl mx-auto w-full px-8">{children}</div>;
 }
 
 function Title({ children }: { children: React.ReactNode }) {
 	return (
-		<h1 className="flex flex-col items-center text-6xl font-medium text-gray-700 text-center relative my-8 uppercase">
+		<Heading className="flex flex-col items-center text-6xl text-gray-700 dark:text-gray-400 text-center relative uppercase font-light mb-8">
 			<AnimateOnScreen
 				className="transition duration-500"
 				idleClassName="opacity-0"
@@ -142,8 +193,8 @@ function Title({ children }: { children: React.ReactNode }) {
 				onScreenClassName="translate-x-0 opacity-100"
 				intersectionObserverOptions={{ threshold: 0.5, rootMargin: '-50px 0px 0px 0px' }}
 			>
-				<div className="mt-4 w-28 border-b-4 border-current" />
+				<div className="mt-3 w-32 border-b-2 border-current" />
 			</AnimateOnScreen>
-		</h1>
+		</Heading>
 	);
 }

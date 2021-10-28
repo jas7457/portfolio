@@ -3,15 +3,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { GoMail } from 'react-icons/go';
 import { FaCity, FaPhone } from 'react-icons/fa';
-import { CgDarkMode } from 'react-icons/cg';
 
 import type { IconType } from 'react-icons';
-import useDarkMode from '@app/hooks/useDarkMode';
-import clsx from 'clsx';
+import DarkModeButton from '@app/components/DarkModeButton';
 
 export default function Header({ isPDF }: { isPDF: boolean }) {
-	const [isDarkMode, setIsDarkMode] = useDarkMode();
-
 	return (
 		<header className="flex flex-col md:flex-row items-center py-4 mb-4 border-b-2 text-center md:text-left space-y-4 md:space-y-0 md:space-x-4">
 			<Image src="/profile.jpg" alt="Jason Addleman" className="rounded-full" width={96} height={96} priority />
@@ -43,15 +39,7 @@ export default function Header({ isPDF }: { isPDF: boolean }) {
 					Pittsburgh, PA
 				</HeaderInfo>
 
-				{!isPDF && (
-					<button
-						className={'flex items-center justify-center md:justify-start'}
-						onClick={() => setIsDarkMode((currentDarkMode) => !currentDarkMode)}
-					>
-						<CgDarkMode className={clsx('mr-2 transform duration-500', { 'rotate-180': isDarkMode })} />{' '}
-						{isDarkMode ? 'Light Mode' : 'Dark Mode'}
-					</button>
-				)}
+				{!isPDF && <DarkModeButton />}
 			</div>
 		</header>
 	);
