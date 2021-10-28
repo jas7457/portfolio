@@ -12,6 +12,8 @@ export default function IndexPage() {
 					name="description"
 					content="Jason Addleman's Portfolio: A Front End Engineer focused on React and TypeScript"
 				/>
+				<meta name="og:title" content="Jason Addleman's Portfolio" />
+				<meta name="og:image " content="/og-images/index.png" />
 			</Head>
 			<Portfolio />
 		</>
