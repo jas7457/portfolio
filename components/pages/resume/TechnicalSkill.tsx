@@ -1,9 +1,11 @@
-import React, { useContext } from 'react';
 import clsx from 'clsx';
+import React, { useContext } from 'react';
+
+import TechContext from '@app/context/TechContext';
+
+import { getTechClasses } from './Tech';
 
 import type { TechObject } from './Tech';
-import TechContext from '@app/context/TechContext';
-import { getTechClasses } from './Tech';
 
 export default function TechnicalSkill(props: TechnicalSkillProps) {
 	const { title, techList, onTechClick } = props;

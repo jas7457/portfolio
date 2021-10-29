@@ -1,5 +1,6 @@
-import React from 'react';
 import clsx from 'clsx';
+import React from 'react';
+import { DiBackbone } from 'react-icons/di';
 import {
 	SiJavascript,
 	SiTypescript,
@@ -26,7 +27,6 @@ import {
 	SiStyledcomponents,
 	SiShopify,
 } from 'react-icons/si';
-import { DiBackbone } from 'react-icons/di';
 
 import { Marionette, Express, Koa, Hapi } from '@app/components/CustomIcons';
 

@@ -1,4 +1,5 @@
 const path = require('path');
+
 const withReactSvg = require('next-react-svg');
 
 module.exports = withReactSvg({

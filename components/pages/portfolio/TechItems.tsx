@@ -1,8 +1,9 @@
-import { TechMap, TechObject } from '../resume/Tech';
-import React, { useState } from 'react';
 import clsx from 'clsx';
+import React, { useState } from 'react';
 
 import AnimateOnScreen from '@app/components/AnimateOnScreen';
+
+import { TechMap, TechObject } from '../resume/Tech';
 
 export default function TechItems() {
 	const [onScreen, setOnScreen] = useState(false);

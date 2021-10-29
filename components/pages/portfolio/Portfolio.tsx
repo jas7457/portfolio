@@ -1,19 +1,18 @@
+import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { BsArrowUpCircleFill } from 'react-icons/bs';
+import { MdAlternateEmail, MdPhoneIphone } from 'react-icons/md';
+import { SiGithub, SiTwitter, SiLinkedin } from 'react-icons/si';
 
 import AnimateOnScreen from '@app/components/AnimateOnScreen';
-
-import Hero from './Hero';
-import Beliefs from './Beliefs';
 import Heading, { HeadingLevel } from '@app/components/Heading';
-import TechItems from './TechItems';
-import { SiGithub, SiTwitter, SiLinkedin } from 'react-icons/si';
-import { MdAlternateEmail, MdPhoneIphone } from 'react-icons/md';
-import { BsArrowUpCircleFill } from 'react-icons/bs';
 
-import clsx from 'clsx';
+import Beliefs from './Beliefs';
+import Hero from './Hero';
 import Projects from './Projects';
+import TechItems from './TechItems';
 
 export default function Portfolio() {
 	return (

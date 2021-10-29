@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
+import React, { useEffect, useRef, useState } from 'react';
 
+import useOnScreen, { UseOnScreenOptions } from '@app/hooks/useOnScreen';
 import { PolymorphicAs } from '@app/types/utils';
-import useOnScreen, { UseOnScreenOptions } from '@hooks/useOnScreen';
 
 export default function AnimateOnScreen<TElement extends React.ElementType>({
 	children,

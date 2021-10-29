@@ -1,18 +1,16 @@
-import React, { useRef, useState } from 'react';
 import clsx from 'clsx';
-
-import Keyboard from './Keyboard';
-
-import useOnScreen from '@app/hooks/useOnScreen';
-import getHexColor, { Colors } from '@app/utils/getHexColor';
+import React, { useRef, useState } from 'react';
 
 import Circle from '@app/assets/svg/circle.svg';
 import HalfCircle from '@app/assets/svg/half-circle.svg';
 import Triangle from '@app/assets/svg/triangle.svg';
+import DarkModeButton from '@app/components/DarkModeButton';
+import useDarkMode from '@app/hooks/useDarkMode';
+import useOnScreen from '@app/hooks/useOnScreen';
+import getHexColor, { Colors } from '@app/utils/getHexColor';
 
 import styles from './Hero.module.scss';
-import useDarkMode from '@hooks/useDarkMode';
-import DarkModeButton from '@app/components/DarkModeButton';
+import Keyboard from './Keyboard';
 
 export default function Hero() {
 	const [mouseRatios, setMouseRatios] = useState({ x: 0, y: 0 });

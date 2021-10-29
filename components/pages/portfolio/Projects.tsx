@@ -1,14 +1,14 @@
+import clsx from 'clsx';
 import Image from 'next/image';
+import React from 'react';
 
 import AnimateOnScreen from '@app/components/AnimateOnScreen';
-import React from 'react';
-import clsx from 'clsx';
-
 import Heading, { HeadingLevel } from '@app/components/Heading';
 
-import pedxMockup from './images/pedx-mockup.png';
-import financesMockup from './images/finances-mockup.png';
 import { TechMap, TechObject } from '../resume/Tech';
+
+import financesMockup from './images/finances-mockup.png';
+import pedxMockup from './images/pedx-mockup.png';
 
 export default function Projects({ className }: { className?: string }) {
 	return (

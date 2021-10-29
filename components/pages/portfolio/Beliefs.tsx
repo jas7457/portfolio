@@ -1,14 +1,14 @@
-import AnimateOnScreen from '@app/components/AnimateOnScreen';
-import React, { useState } from 'react';
 import clsx from 'clsx';
+import React, { useState } from 'react';
+import { FaMobileAlt } from 'react-icons/fa';
+import { GiArrowCursor } from 'react-icons/gi';
+import { MdHealthAndSafety, MdOutlineAccessibility } from 'react-icons/md';
+import { SiReact } from 'react-icons/si';
 
 import Circle from '@app/assets/svg/circle.svg';
-import getHexColor from '@app/utils/getHexColor';
+import AnimateOnScreen from '@app/components/AnimateOnScreen';
 import Heading, { HeadingLevel } from '@app/components/Heading';
-import { FaMobileAlt } from 'react-icons/fa';
-import { MdHealthAndSafety, MdOutlineAccessibility } from 'react-icons/md';
-import { GiArrowCursor } from 'react-icons/gi';
-import { SiReact } from 'react-icons/si';
+import getHexColor from '@app/utils/getHexColor';
 
 export default function Beliefs({ className }: { className?: string }) {
 	const [selectedBeliefIndex, setSelectedBeliefIndex] = useState(0);

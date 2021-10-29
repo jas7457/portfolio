@@ -1,8 +1,9 @@
-import React, { useContext } from 'react';
 import clsx from 'clsx';
+import React, { useContext } from 'react';
+
+import TechContext from '@app/context/TechContext';
 
 import Tech, { TechObject } from './Tech';
-import TechContext from '@app/context/TechContext';
 
 export default function TechList(props: TechListProps) {
 	const { techList } = props;

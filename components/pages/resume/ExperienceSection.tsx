@@ -1,6 +1,7 @@
 import React from 'react';
 
 import TechList from './TechList';
+
 import type { TechObject } from './Tech';
 
 export default function ExperienceSection(props: ExperienceSectionProps) {

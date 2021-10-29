@@ -1,4 +1,5 @@
 import puppeteer from 'puppeteer';
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 const puppeteerPromise = new Promise(async (resolve) => {

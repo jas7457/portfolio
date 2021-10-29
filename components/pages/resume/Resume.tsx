@@ -1,16 +1,16 @@
-import React, { useMemo } from 'react';
-import { useRouter } from 'next/router';
 import clsx from 'clsx';
+import { useRouter } from 'next/router';
+import React, { useMemo } from 'react';
 
-import Header from './Header';
+import TechContext from '@app/context/TechContext';
+import useLocalStorage from '@app/hooks/useLocalStorage';
+
 import ExperienceSection, { ExperienceSectionProps } from './ExperienceSection';
+import Header from './Header';
 import SectionTitle from './SectionTitle';
+import { TechMap, TechObject } from './Tech';
 import TechWord from './TechWord';
 import TechnicalSkill from './TechnicalSkill';
-import { TechMap, TechObject } from './Tech';
-import TechContext from '@app/context/TechContext';
-
-import useLocalStorage from '@app/hooks/useLocalStorage';
 
 export default function Resume() {
 	const router = useRouter();

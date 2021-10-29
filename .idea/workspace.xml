@@ -33,18 +33,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b67b88fa-27cb-4ed3-b8fe-624964548992" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AnimateOnScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AnimateOnScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DarkModeButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/DarkModeButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Heading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Heading.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/pages/portfolio/Beliefs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/portfolio/Beliefs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pages/portfolio/Hero.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/portfolio/Hero.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/pages/portfolio/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/portfolio/Hero.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/pages/portfolio/Portfolio.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/portfolio/Portfolio.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/getHexColors.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/pages/portfolio/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/portfolio/Projects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/pages/portfolio/TechItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/portfolio/TechItems.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/pages/resume/ExperienceSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/resume/ExperienceSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/pages/resume/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/resume/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/pages/resume/Resume.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/resume/Resume.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/pages/resume/Tech.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/resume/Tech.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/pages/resume/TechList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/resume/TechList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/pages/resume/TechWord.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/resume/TechWord.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/pages/resume/TechnicalSkill.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/resume/TechnicalSkill.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hooks/useDarkMode.ts" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useDarkMode.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_document.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/downloadResume.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/downloadResume.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/resume.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/resume.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -78,11 +102,22 @@
       <workItem from="1604030539978" duration="5000" />
       <workItem from="1635292113855" duration="220000" />
       <workItem from="1635375628203" duration="28000" />
+      <workItem from="1635394601294" duration="3265000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -103,13 +138,17 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="94" y="94" width="1349" height="637" key="DiffContextDialog" timestamp="1635292231575">
+    <state x="94" y="94" width="1349" height="637" maximized="true" key="DiffContextDialog" timestamp="1635473964223">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="94" y="94" width="1349" height="637" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1635292231575" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1635292123123">
+    <state x="94" y="94" width="1349" height="637" maximized="true" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1635473964223" />
+    <state x="477" y="145" width="582" height="534" key="find.popup" timestamp="1635473161889">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1635292123123" />
+    <state x="477" y="145" width="582" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1635473161889" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1635472064058">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1635472064058" />
   </component>
 </project>

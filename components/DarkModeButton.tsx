@@ -1,8 +1,8 @@
+import clsx from 'clsx';
 import React from 'react';
 import { CgDarkMode } from 'react-icons/cg';
 
 import useDarkMode from '@app/hooks/useDarkMode';
-import clsx from 'clsx';
 
 export default function DarkModeButton() {
 	const [isDarkMode, setIsDarkMode] = useDarkMode();

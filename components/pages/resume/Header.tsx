@@ -1,11 +1,12 @@
-import React, { HTMLAttributeAnchorTarget } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { GoMail } from 'react-icons/go';
+import React, { HTMLAttributeAnchorTarget } from 'react';
 import { FaCity, FaPhone } from 'react-icons/fa';
+import { GoMail } from 'react-icons/go';
+
+import DarkModeButton from '@app/components/DarkModeButton';
 
 import type { IconType } from 'react-icons';
-import DarkModeButton from '@app/components/DarkModeButton';
 
 export default function Header({ isPDF }: { isPDF: boolean }) {
 	return (
