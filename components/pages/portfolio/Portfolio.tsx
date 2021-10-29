@@ -50,15 +50,20 @@ export default function Portfolio() {
 									</p>
 
 									<p>
+										I'm currently looking for a role that utilizes React, TypeScript, utility css (Tailwind, for
+										example), GraphQL, and Node.
+									</p>
+
+									<p>
 										Interested in working together? View my{' '}
 										<Link href="/resume">
 											<a className="text-primary">resume</a>
 										</Link>
-										,{' '}
+										, download a{' '}
 										<a className="text-primary" href="/JasonAddlemanResume.pdf" download>
-											download
-										</a>{' '}
-										a copy, or connect over{' '}
+											copy
+										</a>
+										, or connect over{' '}
 										<a className="text-primary" href="mailto:jas7457@gmail.com">
 											email
 										</a>{' '}

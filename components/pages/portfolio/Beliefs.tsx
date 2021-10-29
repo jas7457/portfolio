@@ -110,13 +110,13 @@ const beliefs: Array<{
 		children: (
 			<div className="space-y-4">
 				<p>
-					I believe that websites should work well on any device. Whether you are browsing a website on your 30 inch
-					desktop monitor or your iPhone on the bus, you should have a good experience.
+					I believe that websites should work well on any device. Whether you are browsing a website on your 4K desktop
+					monitor or your iPhone on the bus, you should have a good experience.
 				</p>
 
 				<p>
-					Similarly, websites should be <b>fast</b>. I think it's important to code split websites and use utility CSS
-					to ship the smallest bundle size to end users as possible.
+					Similarly, websites should be <b>fast</b>. I think it's important to code split websites and use purged
+					utility CSS to ship the smallest bundle size to end users as possible.
 				</p>
 			</div>
 		),
@@ -128,9 +128,9 @@ const beliefs: Array<{
 		children: (
 			<div className="space-y-4">
 				<p>
-					I believe in the power of declarative UI. Frameworks such as React has really changed the front end landscape.
-					Concepts such as immutable state, unidirectional data flow, and component composition lead to clearer, less
-					error prone code.
+					I believe in the power of declarative UI. Frameworks such as React have really changed the front end
+					landscape. Concepts such as <b>immutable state</b>, unidirectional data flow, and component composition lead
+					to clearer, less error prone code.
 				</p>
 			</div>
 		),
@@ -147,9 +147,13 @@ const beliefs: Array<{
 				</p>
 
 				<p>
-					I'm a big believer that TypeScript and other type-safe languages have numerous benefits. Besides TypeScript, I
-					love to utilize GraphQL for API integrations. These two technologies have a lot of overlap and play very
-					nicely together.
+					I'm a big believer that TypeScript and other type-safe languages have numerous benefits. Fewer bugs, faster
+					coding, and <b>confidence</b> in your application are just a few of the advantages.
+				</p>
+
+				<p>
+					Besides TypeScript, I love to utilize GraphQL for API integrations. Providing type safety both on the front
+					end and back end leads to truly scalable applications.
 				</p>
 			</div>
 		),
@@ -161,8 +165,9 @@ const beliefs: Array<{
 		children: (
 			<div className="space-y-4">
 				<p>
-					I believe the web is made for everyone. Accessibility is a key part of the web, and I believe it's everyone's
-					part to contribute.
+					I believe the web is made for <b>everyone</b>. Accessibility is a key part of the web, and I believe it's
+					everyone's part to contribute. This is an often overlooked aspect of the web and only addressed due to fear of
+					consequence, but I'm an advocate of developing for it and not against it.
 				</p>
 			</div>
 		),
@@ -176,7 +181,7 @@ const beliefs: Array<{
 			<div className="space-y-4">
 				<p>
 					Web apps have pushed the web to great lengths. I pay close attention to the design and implementation of the
-					pages I build and how the interactions on the site create a dynamic and cohesive user experience.
+					pages I build and how the interactions on the site create a dynamic and <b>cohesive</b> user experience.
 				</p>
 			</div>
 		),
