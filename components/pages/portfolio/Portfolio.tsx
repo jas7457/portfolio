@@ -45,8 +45,9 @@ export default function Portfolio() {
 									/>
 									<Heading className="text-3xl font-medium text-dark">Who am I?</Heading>
 									<p>
-										I'm a front end developer based in Pittsburgh, Pennsylvania. I have a passion for modern technology,
-										working and learning with others, and bringing UX interactions to life.
+										I'm an engineering manager and senior front end developer based in Pittsburgh, Pennsylvania. I have
+										a passion for modern technology, working and learning with others, and bringing UX interactions to
+										life.
 									</p>
 
 									<p>

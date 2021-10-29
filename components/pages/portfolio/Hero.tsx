@@ -42,7 +42,12 @@ export default function Hero() {
 					<div>
 						I'm a
 						<Keyboard
-							words={['n Engineering Manager.', ' front end developer.', ' developer advocate.', ' team player.']}
+							words={[
+								'n Engineering Manager.',
+								' senior front end developer.',
+								' developer advocate.',
+								' team player.',
+							]}
 						/>
 					</div>
 				</div>
