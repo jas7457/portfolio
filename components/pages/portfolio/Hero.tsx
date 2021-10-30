@@ -33,7 +33,7 @@ export default function Hero() {
 					});
 				}}
 			>
-				<div className="text-5xl">
+				<div className="text-5xl relative z-10">
 					<div>
 						Hello, my name is <span className="text-primary">Jason Addleman</span>.
 					</div>

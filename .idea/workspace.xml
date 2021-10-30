@@ -32,34 +32,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b67b88fa-27cb-4ed3-b8fe-624964548992" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AnimateOnScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AnimateOnScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DarkModeButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/DarkModeButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Heading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Heading.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pages/portfolio/Beliefs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/portfolio/Beliefs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pages/portfolio/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/portfolio/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pages/portfolio/Portfolio.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/portfolio/Portfolio.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pages/portfolio/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/portfolio/Projects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pages/portfolio/TechItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/portfolio/TechItems.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pages/resume/ExperienceSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/resume/ExperienceSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pages/resume/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/resume/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pages/resume/Resume.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/resume/Resume.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pages/resume/Tech.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/resume/Tech.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pages/resume/TechList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/resume/TechList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pages/resume/TechWord.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/resume/TechWord.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pages/resume/TechnicalSkill.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/resume/TechnicalSkill.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/useDarkMode.ts" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useDarkMode.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_document.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/downloadResume.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/downloadResume.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/resume.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/resume.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="b67b88fa-27cb-4ed3-b8fe-624964548992" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +75,7 @@
       <workItem from="1604030539978" duration="5000" />
       <workItem from="1635292113855" duration="220000" />
       <workItem from="1635375628203" duration="28000" />
-      <workItem from="1635394601294" duration="3265000" />
+      <workItem from="1635394601294" duration="4316000" />
     </task>
     <servers />
   </component>
