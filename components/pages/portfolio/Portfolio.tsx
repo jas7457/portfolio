@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 import { BsArrowUpCircleFill } from 'react-icons/bs';
 import { MdAlternateEmail, MdPhoneIphone } from 'react-icons/md';
-import { SiGithub, SiTwitter, SiLinkedin } from 'react-icons/si';
+import { SiGithub, SiLinkedin } from 'react-icons/si';
 
 import AnimateOnScreen from '@app/components/AnimateOnScreen';
 import Heading, { HeadingLevel } from '@app/components/Heading';
@@ -133,13 +133,6 @@ export default function Portfolio() {
 							href: 'https://github.com/jas7457',
 							classes: 'hocus:text-white',
 							Icon: SiGithub,
-							blankTarget: true,
-						},
-						{
-							title: 'Twitter',
-							href: 'https://twitter.com/jas7457',
-							classes: 'hocus:text-tech-twitter',
-							Icon: SiTwitter,
 							blankTarget: true,
 						},
 						{
