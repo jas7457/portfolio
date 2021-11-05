@@ -33,8 +33,9 @@ export default function Beliefs({ className }: { className?: string }) {
 						<div className="relative flex justify-center">
 							<Circle
 								width={150}
+								height={150}
 								className="transition-transform"
-								strokeWidth={'1px'}
+								strokeWidth="1px"
 								style={{
 									transform: selectedBeliefIndex === index ? 'scale(1)' : 'scale(0.30)',
 								}}
@@ -51,6 +52,7 @@ export default function Beliefs({ className }: { className?: string }) {
 							<Circle
 								color={belief.color}
 								width={15}
+								height={15}
 								className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
 							/>
 						</div>
