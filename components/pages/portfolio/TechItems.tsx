@@ -56,7 +56,7 @@ export default function TechItems() {
 									}}
 								></div>
 							</div>
-							<div className="px-2 flex items-center">{percent}%</div>
+							<div className="px-2 flex items-center dark:text-gray-800">{percent}%</div>
 						</div>
 					</li>
 				))}
