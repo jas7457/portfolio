@@ -41,7 +41,7 @@ export default function Header({ isPDF }: { isPDF: boolean }) {
 					Pittsburgh, PA
 				</HeaderInfo>
 
-				<HeaderInfo Icon={BiLayout} href="/">
+				<HeaderInfo Icon={BiLayout} href={process.env.VERCEL_URL ?? process.env.NEXT_PUBLIC_HOST ?? '/'}>
 					Portfolio
 				</HeaderInfo>
 
