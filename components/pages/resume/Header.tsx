@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { HTMLAttributeAnchorTarget } from 'react';
+import { BiLayout } from 'react-icons/bi';
 import { FaCity, FaPhone } from 'react-icons/fa';
 import { GoMail } from 'react-icons/go';
 
@@ -38,6 +39,10 @@ export default function Header({ isPDF }: { isPDF: boolean }) {
 					target="_blank"
 				>
 					Pittsburgh, PA
+				</HeaderInfo>
+
+				<HeaderInfo Icon={BiLayout} href="/">
+					Portfolio
 				</HeaderInfo>
 
 				{!isPDF && <DarkModeButton />}
