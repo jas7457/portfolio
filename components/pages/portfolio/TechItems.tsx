@@ -8,16 +8,16 @@ import { TechMap, TechObject } from '../resume/Tech';
 export default function TechItems() {
 	const [onScreen, setOnScreen] = useState(false);
 
-	const showcaseList: Array<{ tech: TechObject; percent: number }> = [
-		{ tech: TechMap.React, percent: 95 },
-		{ tech: TechMap.Next, percent: 75 },
-		{ tech: TechMap.TypeScript, percent: 90 },
-		{ tech: TechMap.JavaScript, percent: 85 },
-		{ tech: TechMap.CSS, percent: 85 },
-		{ tech: TechMap.Tailwind, percent: 80 },
-		{ tech: TechMap.GraphQL, percent: 75 },
-		{ tech: TechMap.Node, percent: 80 },
-		{ tech: TechMap.Koa, percent: 65 },
+	const showcaseList: Array<{ tech: TechObject }> = [
+		{ tech: TechMap.React },
+		{ tech: TechMap.Next },
+		{ tech: TechMap.TypeScript },
+		{ tech: TechMap.JavaScript },
+		{ tech: TechMap.CSS },
+		{ tech: TechMap.Tailwind },
+		{ tech: TechMap.GraphQL },
+		{ tech: TechMap.Node },
+		{ tech: TechMap.Koa },
 	];
 
 	return (
@@ -30,7 +30,7 @@ export default function TechItems() {
 			onIntersection={() => setOnScreen(true)}
 		>
 			<ol className="space-y-2">
-				{showcaseList.map(({ tech, percent }) => (
+				{showcaseList.map(({ tech }) => (
 					<li key={tech.name} className="flex relative">
 						<div className={clsx('relative bg-primary-dark text-white w-36 py-1 px-2')}>
 							<div
@@ -43,20 +43,17 @@ export default function TechItems() {
 								<span>{tech.name}</span>
 							</div>
 						</div>
-						<div className="flex-grow bg-gray-300 flex">
-							<div className="flex-grow relative">
-								<div
-									className={clsx('absolute inset-0 bg-primary')}
-									style={{
-										width: `${onScreen ? percent : 0}%`,
-										transitionProperty: 'width',
-										transitionDuration: '1s',
-										transitionDelay: '1s',
-										transitionTimingFunction: 'cubic-bezier(.08,.11,.4,.13)',
-									}}
-								></div>
-							</div>
-							<div className="px-2 flex items-center dark:text-gray-800">{percent}%</div>
+						<div className="flex-grow bg-gray-300 relative">
+							<div
+								className={clsx('absolute inset-0 bg-primary')}
+								style={{
+									width: `${onScreen ? 100 : 0}%`,
+									transitionProperty: 'width',
+									transitionDuration: '1s',
+									transitionDelay: '1s',
+									transitionTimingFunction: 'cubic-bezier(.08,.11,.4,.13)',
+								}}
+							></div>
 						</div>
 					</li>
 				))}
