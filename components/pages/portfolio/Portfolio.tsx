@@ -57,18 +57,18 @@ export default function Portfolio() {
 									<p>
 										Interested in working together? View my{' '}
 										<Link href="/resume">
-											<a className="text-primary">resume</a>
+											<a className="text-primary dark:text-primary-light">resume</a>
 										</Link>
 										, download a{' '}
-										<a className="text-primary" href="/JasonAddlemanResume.pdf" download>
+										<a className="text-primary dark:text-primary-light" href="/JasonAddlemanResume.pdf" download>
 											copy
 										</a>
 										, or connect over{' '}
-										<a className="text-primary" href="mailto:jas7457@gmail.com">
+										<a className="text-primary dark:text-primary-light" href="mailto:jas7457@gmail.com">
 											email
 										</a>{' '}
 										or{' '}
-										<a className="text-primary" href="tel:+7176584499">
+										<a className="text-primary dark:text-primary-light" href="tel:+7176584499">
 											phone!
 										</a>
 									</p>
@@ -101,6 +101,7 @@ export default function Portfolio() {
 
 			<footer className="flex flex-col items-center relative space-y-2 py-8 bg-gray-800 text-gray-400">
 				<button
+					aria-label="Back to top"
 					className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full transition-transform hocus:scale-110"
 					onClick={() => {
 						window.scrollTo({

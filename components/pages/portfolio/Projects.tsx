@@ -19,6 +19,7 @@ export default function Projects({ className }: { className?: string }) {
 						<div className="relative">
 							<Image
 								src={image}
+								alt=""
 								className="scale-95 group-hover:scale-100 group-focus-within:scale-100 opacity-80 group-hover:opacity-100 group-focus-within:opacity-100 transition"
 							/>
 							{(github || website) && (
