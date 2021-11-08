@@ -102,7 +102,7 @@ export default function Portfolio() {
 			<footer className="flex flex-col items-center relative space-y-2 py-8 bg-gray-800 text-gray-400">
 				<button
 					aria-label="Back to top"
-					className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full transition-transform hocus:scale-110"
+					className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full transition-transform hocus:scale-110 focus-visible:outline-none"
 					onClick={() => {
 						window.scrollTo({
 							behavior: 'smooth',
