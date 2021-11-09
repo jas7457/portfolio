@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import React, { HTMLAttributeAnchorTarget } from 'react';
 import { BiLayout } from 'react-icons/bi';
 import { FaCity, FaPhone } from 'react-icons/fa';
@@ -18,11 +17,24 @@ export default function Header({ isPDF }: { isPDF: boolean }) {
 				<h1 className="text-4xl text-primary leading-none mb-1">Jason Addleman</h1>
 				<h2 className="text-xl leading-none">Front End Engineering Manager focused on React and TypeScript</h2>
 
-				{process.env.NEXT_PUBLIC_ENVIRONMENT === 'local' && !isPDF && (
-					<Link href="/api/downloadResume">
-						<a className="mt-2 px-2 py-1 inline-block rounded-lg bg-primary text-white">Download as PDF</a>
-					</Link>
-				)}
+				{!isPDF &&
+					(process.env.NEXT_PUBLIC_ENVIRONMENT === 'local' ? (
+						<a
+							href="/api/downloadResume"
+							className="mt-2 px-2 py-1 inline-block rounded-lg bg-primary text-white"
+							download
+						>
+							Download as PDF
+						</a>
+					) : (
+						<a
+							href="/JasonAddlemanResume.pdf"
+							className="mt-2 px-2 py-1 inline-block rounded-lg bg-primary text-white"
+							download
+						>
+							Download as PDF
+						</a>
+					))}
 			</div>
 
 			<div className="flex-shrink-0 space-y-1">
