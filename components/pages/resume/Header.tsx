@@ -10,7 +10,7 @@ import type { IconType } from 'react-icons';
 
 export default function Header({ isPDF }: { isPDF: boolean }) {
 	return (
-		<header className="flex flex-col md:flex-row items-center py-4 mb-4 border-b-2 text-center md:text-left space-y-4 md:space-y-0 md:space-x-4">
+		<header className="flex flex-col md:flex-row items-center pb-4 mb-4 border-b-2 text-center md:text-left space-y-4 md:space-y-0 md:space-x-4">
 			<Image src="/profile.jpg" alt="Jason Addleman" className="rounded-full" width={96} height={96} priority />
 
 			<div className="flex-grow">

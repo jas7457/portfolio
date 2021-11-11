@@ -13,6 +13,7 @@ import Beliefs from './Beliefs';
 import Hero from './Hero';
 import Projects from './Projects';
 import TechItems from './TechItems';
+import WorkExperiece from './WorkExperience';
 
 export default function Portfolio() {
 	return (
@@ -85,6 +86,15 @@ export default function Portfolio() {
 						<Title>What I Believe</Title>
 						<HeadingLevel>
 							<Beliefs />
+						</HeadingLevel>
+					</Container>
+				</section>
+
+				<section>
+					<Container>
+						<Title>Work Experience</Title>
+						<HeadingLevel>
+							<WorkExperiece />
 						</HeadingLevel>
 					</Container>
 				</section>
@@ -175,25 +185,27 @@ function Container({ children }: { children: React.ReactNode }) {
 
 function Title({ children }: { children: React.ReactNode }) {
 	return (
-		<Heading className="flex flex-col items-center text-6xl text-gray-700 dark:text-gray-400 text-center relative uppercase font-light mb-8">
-			<AnimateOnScreen
-				className="transition duration-500"
-				idleClassName="opacity-0"
-				offScreenClassName="-translate-x-32 opacity-0"
-				onScreenClassName="translate-x-0 opacity-100"
-				intersectionObserverOptions={{ threshold: 0.5, rootMargin: '-50px 0px 0px 0px' }}
-			>
-				{children}
-			</AnimateOnScreen>
-			<AnimateOnScreen
-				className="transition duration-500"
-				idleClassName="opacity-0"
-				offScreenClassName="translate-x-32 opacity-0"
-				onScreenClassName="translate-x-0 opacity-100"
-				intersectionObserverOptions={{ threshold: 0.5, rootMargin: '-50px 0px 0px 0px' }}
-			>
-				<div className="mt-3 w-32 border-b-2 border-current" />
-			</AnimateOnScreen>
-		</Heading>
+		<div className="flex justify-center">
+			<Heading className="flex flex-col items-center text-6xl text-gray-700 dark:text-gray-400 uppercase font-light mb-8">
+				<AnimateOnScreen
+					className="transition duration-500"
+					idleClassName="opacity-0"
+					offScreenClassName="-translate-x-32 opacity-0"
+					onScreenClassName="translate-x-0 opacity-100"
+					intersectionObserverOptions={{ threshold: 0.5, rootMargin: '-50px 0px 0px 0px' }}
+				>
+					{children}
+				</AnimateOnScreen>
+				<AnimateOnScreen
+					className="transition duration-500 w-4/5"
+					idleClassName="opacity-0"
+					offScreenClassName="translate-x-32 opacity-0"
+					onScreenClassName="translate-x-0 opacity-100"
+					intersectionObserverOptions={{ threshold: 0.5, rootMargin: '-50px 0px 0px 0px' }}
+				>
+					<div className="mt-3 w-full border-b-2 border-current" />
+				</AnimateOnScreen>
+			</Heading>
+		</div>
 	);
 }
