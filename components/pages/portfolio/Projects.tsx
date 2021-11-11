@@ -124,9 +124,9 @@ const projects: Array<{
 				</p>
 
 				<p>
-					The user manually adds in accounts instead of linking to any financial instituations. Although it is tedious
-					to manually enter financial information, there is no risk of malicious actors gaining senitive information in
-					the case of a breach.
+					The user manually adds in accounts instead of linking to any financial instituations. Although it is more time
+					consuming to manually enter financial information, there is no risk of malicious actors gaining senitive
+					information in the case of a breach.
 				</p>
 
 				<p>
