@@ -10,18 +10,18 @@ import type { IconType } from 'react-icons';
 
 export default function Header({ isPDF }: { isPDF: boolean }) {
 	return (
-		<header className="flex flex-col md:flex-row items-center pb-4 mb-4 border-b-2 text-center md:text-left space-y-4 md:space-y-0 md:space-x-4">
+		<header className="mb-4 flex flex-col items-center space-y-4 border-b-2 pb-4 text-center md:flex-row md:space-y-0 md:space-x-4 md:text-left">
 			<Image src="/profile.jpg" alt="Jason Addleman" className="rounded-full" width={96} height={96} priority />
 
 			<div className="flex-grow">
-				<h1 className="text-4xl text-primary leading-none mb-1">Jason Addleman</h1>
+				<h1 className="mb-1 text-4xl leading-none text-primary">Jason Addleman</h1>
 				<h2 className="text-xl leading-none">Front End Engineering Manager focused on React and TypeScript</h2>
 
 				{!isPDF &&
 					(process.env.NEXT_PUBLIC_ENVIRONMENT === 'local' ? (
 						<a
 							href="/api/downloadResume"
-							className="mt-2 px-2 py-1 inline-block rounded-lg bg-primary text-white"
+							className="mt-2 inline-block rounded-lg bg-primary px-2 py-1 text-white"
 							download
 						>
 							Download as PDF
@@ -29,7 +29,7 @@ export default function Header({ isPDF }: { isPDF: boolean }) {
 					) : (
 						<a
 							href="/JasonAddlemanResume.pdf"
-							className="mt-2 px-2 py-1 inline-block rounded-lg bg-primary text-white"
+							className="mt-2 inline-block rounded-lg bg-primary px-2 py-1 text-white"
 							download
 						>
 							Download as PDF

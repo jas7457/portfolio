@@ -35,7 +35,7 @@ const experienceArray: ExperienceSectionProps[] = [
 					prioritize, and oversee all new features coming into our main feature line.
 				</p>
 
-				<ul className="list-disc pl-8 space-y-1">
+				<ul className="list-disc space-y-1 pl-8">
 					<li>
 						I oversee and develop a greenfield project that consists of rewriting our legacy web app from the ground up
 						in <TechWord tech={TechMap.React}>React</TechWord>.
@@ -88,7 +88,7 @@ const experienceArray: ExperienceSectionProps[] = [
 					become one of our biggest differentiators in the market.
 				</p>
 
-				<ul className="list-disc pl-8 space-y-1">
+				<ul className="list-disc space-y-1 pl-8">
 					<li>
 						I pushed for the adoption of more modern tools for a large proposal which was proving to be very difficult
 						with our current tech stack.
@@ -137,7 +137,7 @@ const experienceArray: ExperienceSectionProps[] = [
 					layouts, accessible 508-compliant pages, and interactive user experiences.
 				</p>
 
-				<ul className="list-disc pl-8 space-y-1">
+				<ul className="list-disc space-y-1 pl-8">
 					<li>
 						Contributed heavily in migrating a <TechWord tech={TechMap.JQuery}>jQuery</TechWord> codebase into a{' '}
 						<TechWord tech={TechMap.Backbone}>Backbone</TechWord> and{' '}

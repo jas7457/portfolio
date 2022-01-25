@@ -15,7 +15,7 @@ export default function Beliefs({ className }: { className?: string }) {
 
 	return (
 		<AnimateOnScreen
-			className={clsx(className, 'transition duration-1000 space-y-8')}
+			className={clsx(className, 'space-y-8 transition duration-1000')}
 			idleClassName="opacity-0"
 			offScreenClassName="translate-y-48 opacity-0"
 			onScreenClassName="translate-y-0 opacity-100"
@@ -58,7 +58,7 @@ export default function Beliefs({ className }: { className?: string }) {
 						</div>
 						<div className="text-center">
 							<button
-								className="uppercase font-semibold cursor-auto"
+								className="cursor-auto font-semibold uppercase"
 								onFocus={() => setSelectedBeliefIndex(index)}
 								style={
 									selectedBeliefIndex === index
@@ -86,7 +86,7 @@ export default function Beliefs({ className }: { className?: string }) {
 						aria-hidden={selectedBeliefIndex !== index}
 						style={{ gridColumn: '1 / 1', gridRow: '1 / 1' }}
 					>
-						<Heading className="flex items-center space-x-2 text-2xl mt-8 mb-4" style={{ color }}>
+						<Heading className="mt-8 mb-4 flex items-center space-x-2 text-2xl" style={{ color }}>
 							<span>{title}</span>
 							<Icon />
 						</Heading>

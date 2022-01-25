@@ -42,14 +42,14 @@ export default function Resume() {
 
 	return (
 		<div
-			className={clsx('mx-auto px-4 my-4', {
+			className={clsx('mx-auto my-4 px-4', {
 				container: !isPDF,
 			})}
 		>
 			<Header isPDF={isPDF} />
 			<TechContext.Provider value={selectedTech}>
-				<main className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-10">
-					<div className="md:w-2/3 space-y-6">
+				<main className="flex flex-col space-y-6 md:flex-row md:space-y-0 md:space-x-10">
+					<div className="space-y-6 md:w-2/3">
 						<section>
 							<SectionTitle>Introduction</SectionTitle>
 							<p>
@@ -87,7 +87,7 @@ export default function Resume() {
 						</section>
 					</div>
 
-					<div className="md:w-1/3 space-y-6">
+					<div className="space-y-6 md:w-1/3">
 						<section>
 							<SectionTitle>Technical Skills</SectionTitle>
 							<div className="space-y-4">

@@ -20,10 +20,10 @@ export default function Projects({ className }: { className?: string }) {
 							<Image
 								src={image}
 								alt=""
-								className="scale-95 group-hover:scale-100 group-focus-within:scale-100 opacity-80 group-hover:opacity-100 group-focus-within:opacity-100 transition"
+								className="scale-95 opacity-80 transition group-hover:scale-100 group-hover:opacity-100 group-focus-within:scale-100 group-focus-within:opacity-100"
 							/>
 							{(github || website) && (
-								<div className="absolute flex items-center space-x-2 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+								<div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center space-x-2">
 									{(() => {
 										const items = [];
 
@@ -38,7 +38,7 @@ export default function Projects({ className }: { className?: string }) {
 										return items.map(({ site, title }) => (
 											<a
 												key={site}
-												className="bg-gray-800 text-gray-400 hocus:text-white border border-gray-900 px-2 py-1 rounded-full"
+												className="rounded-full border border-gray-900 bg-gray-800 px-2 py-1 text-gray-400 hocus:text-white"
 												href={site}
 												target="_blank"
 												rel="noopener noreferrer"
@@ -55,7 +55,7 @@ export default function Projects({ className }: { className?: string }) {
 
 				const textSide = (
 					<div className="space-y-8">
-						<Heading className="font-bold text-2xl">{title}</Heading>
+						<Heading className="text-2xl font-bold">{title}</Heading>
 
 						<HeadingLevel>
 							{children}
@@ -77,7 +77,7 @@ export default function Projects({ className }: { className?: string }) {
 					<React.Fragment key={title}>
 						{index > 0 && <hr className="my-8" />}
 						<AnimateOnScreen
-							className="grid grid-cols-1 md:grid-cols-2 gap-8 transition duration-1000"
+							className="grid grid-cols-1 gap-8 transition duration-1000 md:grid-cols-2"
 							idleClassName="opacity-0"
 							intersectionObserverOptions={{ rootMargin: '-75px 0px 0px 0px' }}
 							onScreenClassName="translate-x-0 opacity-100"

@@ -14,7 +14,7 @@ export default function TechnicalSkill(props: TechnicalSkillProps) {
 
 	return (
 		<div data-component="technical-skill">
-			<h4 className="font-bold text-lg">{title}</h4>
+			<h4 className="text-lg font-bold">{title}</h4>
 			<ul className="flex flex-wrap">
 				{techList.map((tech) => {
 					const Icon = tech.Icon;
@@ -29,7 +29,7 @@ export default function TechnicalSkill(props: TechnicalSkillProps) {
 									'outline-none focus:outline-none focus:shadow-outline px-5',
 									isSelected
 										? 'border-transparent'
-										: 'border-gray-400 dark:border-gray-600 shadow hocus:bg-gray-700 dark:hocus:bg-gray-200 hocus:text-white dark:hocus:text-gray-800 hocus:border-transparent'
+										: 'border-gray-400 shadow hocus:border-transparent hocus:bg-gray-700 hocus:text-white dark:border-gray-600 dark:hocus:bg-gray-200 dark:hocus:text-gray-800'
 								)}
 								onClick={() => onTechClick(tech)}
 							>

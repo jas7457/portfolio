@@ -27,9 +27,9 @@ export default function Portfolio() {
 					<Container>
 						<Title>About Me</Title>
 						<HeadingLevel>
-							<div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+							<div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
 								<AnimateOnScreen
-									className="text-center space-y-4 transition duration-1000"
+									className="space-y-4 text-center transition duration-1000"
 									idleClassName="opacity-0"
 									onScreenClassName="translate-x-0 opacity-100"
 									offScreenClassName="-translate-x-32 opacity-0"
@@ -109,10 +109,10 @@ export default function Portfolio() {
 				</section>
 			</main>
 
-			<footer className="flex flex-col items-center relative space-y-2 py-8 bg-gray-800 text-gray-400">
+			<footer className="relative flex flex-col items-center space-y-2 bg-gray-800 py-8 text-gray-400">
 				<button
 					aria-label="Back to top"
-					className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full transition-transform hocus:scale-110 focus-visible:outline-none"
+					className="focus-visible:outline-none absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full transition-transform hocus:scale-110"
 					onClick={() => {
 						window.scrollTo({
 							behavior: 'smooth',
@@ -121,8 +121,8 @@ export default function Portfolio() {
 						});
 					}}
 				>
-					<div className="absolute bg-white rounded-full w-3/4 h-3/4 inset-1"></div>
-					<BsArrowUpCircleFill className="text-3xl text-primary relative z-10" />
+					<div className="absolute inset-1 h-3/4 w-3/4 rounded-full bg-white"></div>
+					<BsArrowUpCircleFill className="relative z-10 text-3xl text-primary" />
 				</button>
 				<div className="space-x-2 font-thin">
 					<span>Jason Addleman</span>
@@ -165,7 +165,7 @@ export default function Portfolio() {
 							<a
 								key={index}
 								href={href}
-								className={clsx('hocus:scale-110 transition-transform focus:outline-none', classes)}
+								className={clsx('focus:outline-none transition-transform hocus:scale-110', classes)}
 								title={title}
 								{...(blankTarget && { target: '_blank', rel: 'noopener noreferrer' })}
 							>
@@ -180,13 +180,13 @@ export default function Portfolio() {
 }
 
 function Container({ children }: { children: React.ReactNode }) {
-	return <div className="max-w-7xl mx-auto w-full px-8">{children}</div>;
+	return <div className="mx-auto w-full max-w-7xl px-8">{children}</div>;
 }
 
 function Title({ children }: { children: React.ReactNode }) {
 	return (
 		<div className="flex justify-center">
-			<Heading className="flex flex-col items-center text-6xl text-gray-700 dark:text-gray-400 uppercase font-light mb-8">
+			<Heading className="mb-8 flex flex-col items-center text-6xl font-light uppercase text-gray-700 dark:text-gray-400">
 				<AnimateOnScreen
 					className="transition duration-500"
 					idleClassName="opacity-0"
@@ -197,7 +197,7 @@ function Title({ children }: { children: React.ReactNode }) {
 					{children}
 				</AnimateOnScreen>
 				<AnimateOnScreen
-					className="transition duration-500 w-4/5"
+					className="w-4/5 transition duration-500"
 					idleClassName="opacity-0"
 					offScreenClassName="translate-x-32 opacity-0"
 					onScreenClassName="translate-x-0 opacity-100"

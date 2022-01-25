@@ -31,11 +31,11 @@ export default function TechItems() {
 		>
 			<ol className="space-y-2">
 				{showcaseList.map(({ tech }) => (
-					<li key={tech.name} className="flex relative">
-						<div className={clsx('relative bg-primary-dark text-white w-36 py-1 px-2')}>
+					<li key={tech.name} className="relative flex">
+						<div className={clsx('relative w-36 bg-primary-dark py-1 px-2 text-white')}>
 							<div
 								className={clsx(
-									'flex items-center space-x-2 delay-1000 transition-opacity duration-1000',
+									'flex items-center space-x-2 transition-opacity delay-1000 duration-1000',
 									onScreen ? 'opacity-100' : 'opacity-0'
 								)}
 							>
@@ -43,7 +43,7 @@ export default function TechItems() {
 								<span>{tech.name}</span>
 							</div>
 						</div>
-						<div className="flex-grow bg-gray-300 relative">
+						<div className="relative flex-grow bg-gray-300">
 							<div
 								className={clsx('absolute inset-0 bg-primary')}
 								style={{

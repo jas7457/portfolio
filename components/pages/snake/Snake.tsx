@@ -78,7 +78,7 @@ export default function Snake() {
 	return (
 		<div
 			ref={boardRef}
-			className="grid h-screen mx-auto"
+			className="mx-auto grid h-screen"
 			style={{ width: '100vh', gridTemplate: `repeat(${rows}, 1fr) / repeat(${columns}, 1fr)` }}
 			onKeyDown={(e) => {
 				switch (e.key) {

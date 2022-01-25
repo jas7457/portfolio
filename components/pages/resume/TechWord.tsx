@@ -10,7 +10,7 @@ export default function TechWord(props: TechWordProps) {
 	const techContext = useContext(TechContext);
 
 	return (
-		<span className={clsx('font-mono', { 'text-primary-light font-bold': techContext[tech.name] })}>{children}</span>
+		<span className={clsx('font-mono', { 'font-bold text-primary-light': techContext[tech.name] })}>{children}</span>
 	);
 }
 

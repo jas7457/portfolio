@@ -23,7 +23,7 @@ export default function Hero() {
 		<>
 			<section
 				ref={ref}
-				className="flex items-center justify-center h-screen text-center bg-dark dark:bg-white text-white dark:text-text border-b-4 border-primary relative transition-colors duration-500"
+				className="relative flex h-screen items-center justify-center border-b-4 border-primary bg-dark text-center text-white transition-colors duration-500 dark:bg-white dark:text-text"
 				onMouseMove={(e) => {
 					const box = (e.currentTarget as HTMLDivElement).getBoundingClientRect();
 					const ratios = { x: e.clientX / box.width, y: e.clientY / box.height };
@@ -33,7 +33,7 @@ export default function Hero() {
 					});
 				}}
 			>
-				<div className="text-5xl relative z-10">
+				<div className="relative z-10 text-5xl">
 					<div>
 						Hello, my name is <span className="text-primary">Jason Addleman</span>.
 					</div>
@@ -66,7 +66,7 @@ export default function Hero() {
 					{[1, 2, 3].map((num, index) => (
 						<div
 							key={num}
-							className={clsx('absolute w-px h-full overflow-hidden left-1/2')}
+							className={clsx('absolute left-1/2 h-full w-px overflow-hidden')}
 							style={{
 								left: (() => {
 									if (num === 1) {
@@ -80,7 +80,7 @@ export default function Hero() {
 							}}
 						>
 							<div
-								className={clsx(styles.line, 'absolute w-full -top-1/2 left-0', { [styles['dark-line']]: isDark })}
+								className={clsx(styles.line, 'absolute -top-1/2 left-0 w-full', { [styles['dark-line']]: isDark })}
 								style={{ animationDelay: `${index * 1200 + 1500}ms` }}
 							></div>
 						</div>
