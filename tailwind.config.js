@@ -1,9 +1,9 @@
+const interactionVariantPlugin = require('tailwindcss-interaction-variants');
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-	purge: ['./**/*.tsx'],
+	content: ['./**/*.tsx'],
 	darkMode: 'class',
-	mode: 'jit',
 	theme: {
 		colors: {
 			transparent: 'transparent',
@@ -54,5 +54,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require('tailwindcss-interaction-variants')],
+	plugins: [interactionVariantPlugin],
 };

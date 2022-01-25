@@ -25,7 +25,6 @@ const experienceArray: ExperienceSectionProps[] = [
 			TechMap.Mongo,
 			TechMap.Koa,
 			TechMap.Hapi,
-			TechMap.Jest,
 			TechMap.Ember,
 		],
 		children: (
