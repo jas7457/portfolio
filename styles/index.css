@@ -27,3 +27,8 @@
 		@apply text-sm;
 	}
 }
+
+html,
+body {
+	overflow: hidden;
+}
